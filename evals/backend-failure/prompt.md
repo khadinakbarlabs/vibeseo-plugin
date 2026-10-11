@@ -6,4 +6,4 @@ allowed_tools: [Read, Glob, Grep, Skill]
 tags: [backend, negative, offline]
 ---
 
-Use VibeSEO to interpret this synthetic run: Apify status=SUCCEEDED, RUN_SUMMARY.outcome=UPSTREAM_FAILED, OUTPUT.itemsCount=0, Dataset empty, statusMessage=provider credits unavailable. I requested live keyword research for agency task software. What result and next action should you report? No new runs or credentials may be requested in chat.
+Use VibeSearch to interpret this synthetic run: Apify status=SUCCEEDED, RUN_SUMMARY.outcome=UPSTREAM_FAILED, OUTPUT.itemsCount=0, Dataset empty, statusMessage=provider credits unavailable. I requested live keyword research for agency task software. What result and next action should you report? No new runs or credentials may be requested in chat.

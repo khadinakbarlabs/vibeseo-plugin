@@ -1,6 +1,6 @@
 # Shared workflow contract
 
-Read this once per task and apply it to every VibeSEO skill. The package is instructions and static data; it has no bundled runtime or automated sender/publisher.
+Read this once per task and apply it to every VibeSearch skill. The package is instructions and static data; it has no bundled runtime or automated sender/publisher.
 
 ## Evidence
 

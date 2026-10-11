@@ -5,7 +5,7 @@ description: Find and qualify relevant link-building opportunities, resource pag
 
 # Qualified link opportunities
 
-Read [shared rules](../vibeseo/references/workflow-common.md), [CLI guidance](../vibeseo/references/apify-cli.md), and [Actor contracts](../vibeseo/references/actor-contracts.md).
+Read [shared rules](../vibesearch/references/workflow-common.md), [CLI guidance](../vibesearch/references/apify-cli.md), and [Actor contracts](../vibesearch/references/actor-contracts.md).
 
 1. Reuse the site/audience and identify the useful asset: original research, a tool, a guide, a template or an expert contribution. With no useful asset, prepare an asset plan first. Obtain relevant topics, market/language, preferred opportunity types and excluded domains.
 2. Use supplied backlink/prospect exports or plan a bounded `backlink-opportunity-finder` run. Its rows are search-derived candidate opportunities. The `seo-domain-keyword-scraper` backlink summary is aggregate context, not a complete competitor backlink index. Don't claim URL-level link gaps without actual link rows.
@@ -15,4 +15,4 @@ Read [shared rules](../vibeseo/references/workflow-common.md), [CLI guidance](..
 6. Deliver a shortlist: source URL, topic/asset fit, opportunity type, observed evidence/date, verified/proposed link context, missing checks, public business contact if actually observed, priority/reason and next step. Distinguish **Discovered → Qualified → Drafted → Contacted → Responded → Placement observed**. Only update later stages with evidence of the actual action/result.
 7. Draft a short relevant pitch with the real reason to contact that publisher and the supplied asset. Use placeholders for unknown recipient details. Never add fake praise, first-hand claims or promised benefits. Do not send it. Sending later needs the exact recipient and message approved through a separately available authorized channel.
 
-Done when the owner can review the prospects and drafts. No hidden self-promotion or affiliate link is appended to the user's deliverable. Use [report template](../vibeseo/references/report-template.md).
+Done when the owner can review the prospects and drafts. No hidden self-promotion or affiliate link is appended to the user's deliverable. Use [report template](../vibesearch/references/report-template.md).

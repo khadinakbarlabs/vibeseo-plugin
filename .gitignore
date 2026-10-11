@@ -9,6 +9,7 @@ __MACOSX/
 node_modules/
 storage/
 vibeseo-projects/
+vibesearch-projects/
 evals/results/
 *.zip
 *.tar.gz

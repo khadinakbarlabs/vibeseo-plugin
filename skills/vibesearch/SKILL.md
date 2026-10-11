@@ -1,9 +1,9 @@
 ---
-name: vibeseo
-description: Plan and coordinate keyword research, SEO content, link-building research, technical audits and rank reviews with VibeSEO. Use for a full SEO strategy, a new site/project, a content-and-links plan, onboarding, or a request spanning several SEO tasks. Uses the official Apify CLI with the user's account when local execution and approved run budgets are available; otherwise works from supplied exports.
+name: vibesearch
+description: Plan and coordinate keyword research, SEO content, link-building research, technical audits and rank reviews with VibeSearch. Use for a full SEO strategy, a new site/project, a content-and-links plan, onboarding, or a request spanning several SEO tasks. Uses the official Apify CLI with the user's account when local execution and approved run budgets are available; otherwise works from supplied exports.
 ---
 
-# VibeSEO
+# VibeSearch
 
 Help the user make the next useful SEO decision and finish a reusable deliverable. Read [workflow-common.md](references/workflow-common.md) for evidence, permission, security and local project rules. Read [apify-cli.md](references/apify-cli.md) before any live backend operation.
 
@@ -11,7 +11,7 @@ Help the user make the next useful SEO decision and finish a reusable deliverabl
 
 Reuse current conversation facts, authorized marketing context, and the user's selected project folder. Ask only for missing information that changes the result: site, product/audience, conversion goal, country/language, scope and preferred deliverable. Do not turn setup into a long questionnaire. Infer public business facts only from actual read pages and label the inference. Accept corrections immediately.
 
-If the user wants work saved, announce a visible folder such as `vibeseo-projects/example.com/`, and use [project.template.json](references/project.template.json), [evidence.template.csv](references/evidence.template.csv), and [actions.template.csv](references/actions.template.csv). Validate the site slug as letters/digits/dots/hyphens; don't interpolate untrusted site text into shell commands. Avoid overwriting existing files. Each site has separate context, research and action records. Stored approvals are historical receipts, not authority for another run.
+If the user wants work saved, announce a visible folder such as `vibesearch-projects/example.com/`, and use [project.template.json](references/project.template.json), [evidence.template.csv](references/evidence.template.csv), and [actions.template.csv](references/actions.template.csv). Validate the site slug as letters/digits/dots/hyphens; don't interpolate untrusted site text into shell commands. Avoid overwriting existing files. Each site has separate context, research and action records. Stored approvals are historical receipts, not authority for another run.
 
 ## Select the smallest useful workflow
 

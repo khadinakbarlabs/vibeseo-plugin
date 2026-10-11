@@ -1,14 +1,14 @@
-# VibeSEO: Keywords, Content & Link Building
+# VibeSearch: SEO, Keywords & Backlinks
 
-![VibeSEO](assets/icon.svg)
+![VibeSearch](assets/icon.svg)
 
-Turn search data into an SEO plan, useful content, and a qualified list of link-building opportunities. VibeSEO is a skills-only plugin for Claude Code that uses Khadin Akbar's Apify Actors through the official Apify CLI. It helps founders, content teams, and agencies research what to target, decide what to write or improve, and prepare relevant outreach with evidence attached.
+Turn search data into an SEO plan, useful content, and a qualified list of link-building opportunities. VibeSearch is a skills-only plugin for Claude Code that uses Khadin Akbar's Apify Actors through the official Apify CLI. It helps founders, content teams, and agencies research what to target, decide what to write or improve, and prepare relevant outreach with evidence attached.
 
 ## What you can do
 
 | Skill | Finished deliverable |
 | --- | --- |
-| `vibeseo` | Site context, research plan, visible project folder, action queue |
+| `vibesearch` | Site context, research plan, visible project folder, action queue |
 | `keywords` | Keyword clusters, intent, priorities, keyword-to-page map and content calendar |
 | `content-brief` | SERP-informed writer brief, original angle, outline, title/meta options, reviewed draft when requested |
 | `content-refresh` | Keep/change/add plan for an existing page, evidence checks and draft edits |
@@ -28,7 +28,7 @@ Ask Claude:
 
 > Find relevant resource pages for our original checklist and draft outreach for my review.
 
-Or use `/vibeseo:keywords`, `/vibeseo:content-brief`, `/vibeseo:link-building`, and the other namespaced skills. The assistant asks only for the site, audience, market, goal, or permissions that are missing from the conversation and chosen project folder.
+Or use `/vibesearch:keywords`, `/vibesearch:content-brief`, `/vibesearch:link-building`, and the other namespaced skills. The assistant asks only for the site, audience, market, goal, or permissions that are missing from the conversation and chosen project folder.
 
 ## Install and requirements
 
@@ -40,7 +40,7 @@ For a local source checkout, load the plugin with the [supported Claude Code dev
 claude --plugin-dir ./vibeseo-plugin
 ```
 
-For an extracted Claude-only archive, use the extraction directory in place of `./vibeseo-plugin`. The repository also includes a local marketplace adapter named `vibeseo-tools`, with the plugin at the repository root. Follow the [official marketplace install flow](https://code.claude.com/docs/en/plugin-marketplaces) if you choose that route; do not load a cached and a development edition together. Directory submission and publication remain separate from either local method.
+For an extracted Claude-only archive, use the extraction directory in place of `./vibeseo-plugin`. The repository also includes a local marketplace adapter named `vibesearch-tools`, with the plugin at the repository root. Follow the [official marketplace install flow](https://code.claude.com/docs/en/plugin-marketplaces) if you choose that route; do not load a cached and a development edition together. Directory submission and publication remain separate from either local method.
 
 For live research, install the official CLI from npm at the tested version:
 
@@ -50,7 +50,7 @@ apify --version
 apify login
 ```
 
-You complete Apify's interactive login yourself. VibeSEO never asks you to paste tokens or provider passwords into chat and never opens credential files. Existing CLI authentication alone does not authorize a run. The third-party CLI has its own dependencies, authentication storage and optional telemetry settings; see [Apify CLI documentation](https://docs.apify.com/cli).
+You complete Apify's interactive login yourself. VibeSearch never asks you to paste tokens or provider passwords into chat and never opens credential files. Existing CLI authentication alone does not authorize a run. The third-party CLI has its own dependencies, authentication storage and optional telemetry settings; see [Apify CLI documentation](https://docs.apify.com/cli).
 
 Live data collection requires a host that can execute the CLI, an Apify account, an available Actor build and a user-approved run budget. Optional caller-supplied provider credentials may be required for some advanced modes. Configure those through Apify's own secure controls and review its input-storage practices; ordinary examples include no secrets. If the backend needs unavailable provider access, the workflow reports that limitation. No paid provider subscription is bundled.
 
@@ -77,7 +77,7 @@ The plugin contains Markdown skills, JSON schemas/templates, evaluation cases, a
 
 On an approved live research operation, the assistant invokes the independently installed `apify` command. That CLI sends the approved domains, keywords, URLs, geographic/language settings and bounds to `api.apify.com`, then retrieves that run's metadata and outputs. Actors may visit the named websites, Google search pages and provider services such as DataForSEO according to their current implementation and input mode. No publisher account credentials are included. The user owns the calling Apify account and pays its applicable charges.
 
-Reports and project context are saved in a visible local folder you choose, typically `vibeseo-projects/<site>/`. The assistant records only task-relevant context, sources, decisions and action status there. It does not upload that folder or share it with the publisher. Model-host chat/file handling, Apify storage/retention and the CLI's own behavior are governed by those services. See [Privacy and data handling](PRIVACY.md).
+Reports and project context are saved in a visible local folder you choose, typically `vibesearch-projects/<site>/`. The assistant records only task-relevant context, sources, decisions and action status there. It does not upload that folder or share it with the publisher. Model-host chat/file handling, Apify storage/retention and the CLI's own behavior are governed by those services. See [Privacy and data handling](PRIVACY.md).
 
 Before each new billable operation the assistant shows the exact Actors, input scope, market, build, limits and budget for approval. Apify currently documents `maxTotalChargeUsd` as a total Apify run-cost cap across pricing models. A separate provider account's charges, several runs together, and later data retrieval still need their own budget review; this is not a universal account spending limit. Time, memory and result limits are set too. The plugin never changes billing or provider plans.
 

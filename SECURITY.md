@@ -2,7 +2,7 @@
 
 ## Supported release
 
-Security fixes target the latest 0.1.x VibeSEO package. Update to the latest reviewed version before reproducing a package problem. Apify, the independent CLI, model hosts and upstream data providers maintain their own security policies.
+Security fixes target the latest 0.1.x VibeSearch package. Update to the latest reviewed version before reproducing a package problem. Apify, the independent CLI, model hosts and upstream data providers maintain their own security policies.
 
 ## Report a concern
 

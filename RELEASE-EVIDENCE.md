@@ -1,12 +1,12 @@
-# Release evidence — VibeSEO 0.1.1
+# Release evidence — VibeSearch 0.1.2
 
 Evidence date: 2026-10-11. This file distinguishes package checks, backend observations, host behavior, and directory state.
 
 ## Completed package checks
 
-- Authoritative `claude plugin validate --strict`: plugin and local marketplace manifests passed with no warnings for 0.1.1.
+- Authoritative `claude plugin validate --strict`: the renamed 0.1.2 plugin and local marketplace manifests passed with no warnings. Exact results are retained in the external review packet.
 - Portable Agent Plugins 1.0 schema: passed.
-- Anthropic display name 42 characters; description 419 characters. Private Plugin Creator display name 22 characters; subtitle 29 characters. Identity/version are synchronized across manifests.
+- Anthropic display name 37 characters; description 419 characters. Private Plugin Creator display name 27 characters; subtitle 29 characters. The package name is `vibesearch` and identity/version are synchronized across manifests.
 - Seven skill names/frontmatter and local reference paths: checked. Plugin Builder's component budget passed with seven skills, zero commands and zero agents; this is a local profile, not an Anthropic maximum.
 - Eight illustrative Actor inputs: validated against the live schemas read on 2026-10-11, including types/enums, known keys and omission of secret fields.
 - Credential-pattern, file-size, case-collision and runtime-component checks: passed. A destination-specific Claude archive is prepared from Plugin Builder's native bundler and supplemented with the referenced review/evidence resources that its generic allowlist omits. Archive round-trip checks and hashes live in the owner's external review packet; a bundler's successful exit alone is not proof of reference closure.
@@ -22,16 +22,16 @@ No new billable Actor run was started. Current Apify documentation describes `ma
 
 ## Host behavior checks
 
-Ten authored native evaluation cases cover evidence missingness, content originality, link-state integrity, upstream failure, prompt injection, rank comparability, spend consent, ordinary-language discovery, project resume and missing-CLI recovery. The earlier native runner resolved VibeSEO 0.1.0 and parsed its first case, but stopped immediately on expired Claude OAuth authentication (`auth_failed`); cost was $0 and no meaningful workflow evaluation completed. The user was asked to refresh their local Claude Code login. Version 0.1.1's ten prompts and routing graders are structurally checked; they are not passed behavior tests. Live CLI research is targeted to Claude Code. Cowork and browser-chat live execution are not validated.
+Ten authored native evaluation cases cover evidence missingness, content originality, link-state integrity, upstream failure, prompt injection, rank comparability, spend consent, ordinary-language discovery, project resume and missing-CLI recovery. The earlier native runner resolved VibeSEO 0.1.0 and parsed its first case, but stopped immediately on expired Claude OAuth authentication (`auth_failed`); cost was $0 and no meaningful workflow evaluation completed. The user was asked to refresh their local Claude Code login. The current prompts and routing graders use VibeSearch; structural checks do not establish passed behavior tests. Live CLI research is targeted to Claude Code. Cowork and browser-chat live execution are not validated.
 
 ## Release and directory states
 
-- Local source package: 0.1.1 authored and manifest/input validated.
+- Local source package: renamed to VibeSearch 0.1.2 at the owner's request. Seven workflows and eight Actor contracts are retained.
 - Final archive inspection: destination-specific checks are recorded in the external owner review packet; inspect the exact supplied version/hash.
-- Plugin Creator private save: 0.1.0 was created and read back; the updated release is verified separately in the external owner review packet.
-- GitHub source upload: saved privately at `khadinakbarlabs/vibeseo-plugin`; public source release awaits owner approval.
-- Anthropic portal validation: 0.1.0 source validation passed at commit `96435d8`, with five harmless directory-field warnings and a VibeSEO brand ownership hold. A persistent draft was saved with Claude Code as the only selected surface and auto-publishing off. Revalidation of changed source is recorded separately in the external owner review packet.
-- Owner approval of final metadata/public release/submission: pending, explicitly requested by the owner.
+- Plugin Creator private save: the existing 0.1.1 release is updated through the same plugin identity; the current result and readback are verified separately in the external owner review packet.
+- GitHub source: public at `khadinakbarlabs/vibeseo-plugin`. The original 0.1.1 source and native archive were published. The renamed source and 0.1.2 archive are tracked separately in the external release record.
+- Anthropic portal validation: the original 0.1.1 source passed at commit `b38f472`, with five directory-only field warnings and a VibeSEO brand ownership hold. Revalidation of the renamed source and the exact saved draft state are recorded in the external owner review packet.
+- Owner authorization: review and public release were authorized; the owner requested the new VibeSearch name. Final directory submission commits the publisher declarations under Anthropic's Directory Terms and remains a separate action-time confirmation.
 - Submitted for Anthropic review: no.
 - Anthropic reviewer approval: no.
 - Live directory publication: no.

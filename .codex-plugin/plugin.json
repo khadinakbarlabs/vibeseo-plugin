@@ -1,6 +1,6 @@
 {
-  "name": "vibeseo",
-  "version": "0.1.1",
+  "name": "vibesearch",
+  "version": "0.1.2",
   "description": "Keyword research, SEO content briefs and refreshes, technical audits, qualified link-building opportunities and sampled rank comparisons using your Apify Actors through the official CLI.",
   "author": {
     "name": "Khadin Akbar"
@@ -25,11 +25,11 @@
   ],
   "extensions": {
     "com.openai": {
-      "onboardingSkill": "./skills/vibeseo/SKILL.md",
+      "onboardingSkill": "./skills/vibesearch/SKILL.md",
       "interface": {
-        "displayName": "VibeSEO: SEO & Content",
+        "displayName": "VibeSearch: SEO & Backlinks",
         "shortDescription": "Keywords, content & backlinks",
-        "longDescription": "Build an SEO plan you can act on. VibeSEO connects your assistant to eight Apify Actors through the official Apify CLI to research keywords, inspect Google search results, compare competitor keywords, audit pages, discover relevant link opportunities and sample keyword rankings. Seven focused skills produce keyword-to-page maps, content calendars, writer-ready briefs, reviewed drafts, content refresh plans, qualified link prospect lists, outreach drafts and source-linked reports. Reuse supplied exports for offline work; missing metrics remain unknown. Your own Apify account handles authentication and Actor charges, with explicit approval and a bounded plan before each billable operation. Reports and project context are saved in a visible folder you choose. Local command execution is required for live research. The package contains skills and static supporting files; no bundled server, MCP connection, hooks, sender or scheduler. It does not publish content, send outreach or acquire backlinks automatically, and does not guarantee traffic or rankings.",
+        "longDescription": "Build an SEO plan you can act on. VibeSearch connects your assistant to eight Apify Actors through the official Apify CLI to research keywords, inspect Google search results, compare competitor keywords, audit pages, discover relevant link opportunities and sample keyword rankings. Seven focused skills produce keyword-to-page maps, content calendars, writer-ready briefs, reviewed drafts, content refresh plans, qualified link prospect lists, outreach drafts and source-linked reports. Reuse supplied exports for offline work; missing metrics remain unknown. Your own Apify account handles authentication and Actor charges, with explicit approval and a bounded plan before each billable operation. Reports and project context are saved in a visible folder you choose. Local command execution is required for live research. The package contains skills and static supporting files; no bundled server, MCP connection, hooks, sender or scheduler. It does not publish content, send outreach or acquire backlinks automatically, and does not guarantee traffic or rankings.",
         "developerName": "Khadin Akbar",
         "category": "Data & Analytics",
         "logo": "./assets/icon.svg",

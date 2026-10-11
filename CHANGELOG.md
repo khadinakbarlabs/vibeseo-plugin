@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.2 — 2026-10-11
+
+Renamed the plugin to **VibeSearch: SEO, Keywords & Backlinks**, with package and onboarding skill name `vibesearch`. Updated the native and portable manifests, skill namespace, references, evaluation routing, project-folder examples and documentation. The existing repository and eight Apify Actor backends are retained.
+
 ## 0.1.1 — 2026-10-11
 
 Plugin Builder review: add a security reporting route, field-level privacy matrix, local Claude marketplace adapter and an offline reviewer guide. Expand native fixtures for ordinary discovery, resume and missing CLI recovery. Prepare an isolated Claude archive with all required references retained. Keep the existing seven workflows, Actor backend, CLI design and listing copy.

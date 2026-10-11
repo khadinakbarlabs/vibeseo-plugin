@@ -14,7 +14,7 @@ Revision: 2026-10-11. This matrix describes intended workflow handling, not an a
 | Project goal, audience, decisions and action queue | Resume the chosen project | Visible local project folder; no publisher synchronization | User can edit/remove records; reconcile with the current request |
 | Apify authentication and optional provider secrets | Authenticate independently approved operations | Entered by the user through official CLI/provider/Apify controls; never opened or copied by the plugin | Governed by those services; never put secrets in chat, examples, reports or issue trackers |
 
-There is no publisher-hosted VibeSEO plugin service, credential collector or package telemetry. That does not make an Actor run local-only: Apify and authorized Actor operators may have access to run inputs, logs and outputs under platform permissions. Account-wide billing, retention, credentials and permissions are not modified by the plugin.
+There is no publisher-hosted VibeSearch plugin service, credential collector or package telemetry. That does not make an Actor run local-only: Apify and authorized Actor operators may have access to run inputs, logs and outputs under platform permissions. Account-wide billing, retention, credentials and permissions are not modified by the plugin.
 
 The privacy disclosures are “Reads and stores”, external transfers described in the README, and retention potentially longer than 30 days. Local reports have no automatic deletion period; no fixed cloud deletion date is promised. Before a live operation, inspect the selected Actor's current README/schema and disclose its applicable providers. DataForSEO is one possible provider, not a universal destination for every Actor.
 

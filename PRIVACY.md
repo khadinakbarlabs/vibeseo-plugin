@@ -1,8 +1,8 @@
 # Privacy and data handling
 
-Effective draft: 2026-10-11. Publisher: Khadin Akbar. Applies to the VibeSEO skills package, not an independently operated SaaS service.
+Effective draft: 2026-10-11. Publisher: Khadin Akbar. Applies to the VibeSearch skills package, not an independently operated SaaS service.
 
-VibeSEO bundles instructions and static supporting files. It does not operate a publisher-hosted service, collect credentials, or add telemetry. The assistant uses task context already provided in the conversation, authorized exports, and a visible project folder the user selects.
+VibeSearch bundles instructions and static supporting files. It does not operate a publisher-hosted service, collect credentials, or add telemetry. The assistant uses task context already provided in the conversation, authorized exports, and a visible project folder the user selects.
 
 ## Information used
 
