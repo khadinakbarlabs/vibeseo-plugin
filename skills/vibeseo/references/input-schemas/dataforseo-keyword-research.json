@@ -1,0 +1,109 @@
+{
+  "title": "DataForSEO Keyword Research Input",
+  "description": "Run bounded the keyword-data API keyword discovery or Google Ads search-volume research. Each persisted keyword is a billed dataset row; the keyword-data API provider usage is recorded separately in RUN_SUMMARY.",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "mode": {
+      "title": "Research mode",
+      "type": "string",
+      "description": "Choose the keyword-data API keyword job. keyword_ideas discovers related phrases; search_volume measures the supplied phrases. Use keyword_ideas for research expansion and search_volume for a known shortlist. This is not a rank-tracking or domain-keyword tool.",
+      "editor": "select",
+      "default": "keyword_ideas",
+      "enum": [
+        "keyword_ideas",
+        "search_volume"
+      ],
+      "enumTitles": [
+        "Keyword ideas",
+        "Google Ads search volume"
+      ],
+      "example": "keyword_ideas"
+    },
+    "seedKeywords": {
+      "title": "Seed keywords",
+      "type": "array",
+      "description": "Provide 1-10 seed phrases, for example [\"keyword research\"]. Keyword ideas uses them to discover related terms; search volume measures those exact phrases. Blank and duplicate entries are removed. This is not a target domain or Google search operator field.",
+      "editor": "stringList",
+      "prefill": [
+        "keyword research"
+      ],
+      "example": [
+        "keyword research",
+        "content strategy"
+      ],
+      "minItems": 1,
+      "maxItems": 10,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 80
+      }
+    },
+    "locationCode": {
+      "title": "Google location code",
+      "type": "integer",
+      "description": "the keyword-data API Google location code, such as 2840 for the United States. It scopes the returned keyword database metrics. Defaults to 2840 and must be a positive integer. This is not an ISO country string.",
+      "editor": "number",
+      "default": 2840,
+      "minimum": 1,
+      "example": 2840
+    },
+    "languageCode": {
+      "title": "Google language code",
+      "type": "string",
+      "description": "the keyword-data API language code for the selected location, such as en. It scopes the language of keyword metrics and ideas. Defaults to en. This is not a natural-language name such as English.",
+      "editor": "textfield",
+      "default": "en",
+      "pattern": "^[a-zA-Z]{2,5}$",
+      "example": "en"
+    },
+    "maxResults": {
+      "title": "Maximum keyword rows",
+      "type": "integer",
+      "description": "Maximum normalized keyword rows to persist. The Actor caps this at 50 to keep the keyword-data API and Apify costs predictable. Defaults to 25. This is not an unbounded provider pagination setting.",
+      "editor": "number",
+      "default": 25,
+      "minimum": 1,
+      "maximum": 50,
+      "example": 25
+    },
+    "minSearchVolume": {
+      "title": "Minimum search volume",
+      "type": "integer",
+      "description": "Keep only rows whose provider-reported search volume meets this minimum. Defaults to zero, so rows with a valid zero estimate remain visible. Use it to reduce a keyword-ideas export. This is not a claim of traffic or conversion potential.",
+      "editor": "number",
+      "default": 0,
+      "minimum": 0,
+      "maximum": 10000000,
+      "example": 100
+    },
+    "includeSerpInfo": {
+      "title": "Include SERP features",
+      "type": "boolean",
+      "description": "Request available SERP feature information for keyword-ideas rows. It defaults to false to keep provider work bounded. It has no effect on search_volume mode. This is not a live rank-check request.",
+      "editor": "checkbox",
+      "default": false,
+      "example": false
+    },
+    "dataforSeoLogin": {
+      "title": "DataForSEO login",
+      "type": "string",
+      "description": "Optional DataForSEO API login used only when the owner secret is unavailable. It is sent only in the HTTP authorization header. Keep it private and never use it in tasks. This is not an Apify token.",
+      "editor": "textfield",
+      "isSecret": true,
+      "example": "your-private-dataforseo-login"
+    },
+    "dataforSeoPassword": {
+      "title": "DataForSEO API password",
+      "type": "string",
+      "description": "Optional DataForSEO API password used only when the owner secret is unavailable. It is sent only in the HTTP authorization header. Keep it private and never use it in tasks. This is not your DataForSEO dashboard password.",
+      "editor": "textfield",
+      "isSecret": true,
+      "example": "your-private-dataforseo-password"
+    }
+  },
+  "required": [
+    "seedKeywords"
+  ]
+}

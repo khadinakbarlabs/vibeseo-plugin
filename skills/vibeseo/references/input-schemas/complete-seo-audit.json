@@ -1,0 +1,109 @@
+{
+  "title": "Complete SEO Audit Input",
+  "description": "Audit one public website across a bounded sample of same-origin HTML pages.",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "siteUrl": {
+      "title": "Website URL",
+      "type": "string",
+      "description": "The public website origin or homepage to audit, for example https://example.com. The Actor follows same-origin links and sitemap URLs from this starting point. Required and must not contain credentials or private-network addresses.",
+      "editor": "textfield",
+      "prefill": "https://example.com",
+      "example": "https://example.com"
+    },
+    "maxPages": {
+      "title": "Maximum HTML pages",
+      "type": "integer",
+      "description": "Maximum same-origin HTML pages to sample, including the homepage. Use 1 for a fast spot check and up to 50 for a broader bounded audit. Defaults to 10 and limits crawl scope, not platform usage. Not a search-engine index inspection.",
+      "editor": "number",
+      "default": 10,
+      "minimum": 1,
+      "maximum": 50,
+      "example": 10
+    },
+    "checkLinks": {
+      "title": "Check sampled links",
+      "type": "boolean",
+      "description": "Fetches a bounded sample of discovered links and classifies them as ok, redirect, broken, blocked, timeout, or error. Defaults to true. Use false when you already have a dedicated link inventory. Not a replacement for a full broken-link crawl.",
+      "editor": "checkbox",
+      "default": true,
+      "example": true
+    },
+    "maxLinksPerPage": {
+      "title": "Links per page",
+      "type": "integer",
+      "description": "Maximum unique links sampled from each analyzed page when link checks are enabled. Defaults to 10 and accepts 1 through 50. Lower values reduce target requests and platform usage. Not a cap on links reported in page counts.",
+      "editor": "number",
+      "default": 10,
+      "minimum": 1,
+      "maximum": 50,
+      "example": 10
+    },
+    "maxInternalLinksPerPage": {
+      "title": "Internal link details per page",
+      "type": "integer",
+      "description": "Maximum extracted internal-link details retained for each analyzed page. Defaults to 25 and accepts 1 through 100. It limits report size, not same-origin page discovery or link-health checks. Increase it when you need a denser internal-link graph for the sampled pages.",
+      "editor": "number",
+      "default": 25,
+      "minimum": 1,
+      "maximum": 100,
+      "example": 25
+    },
+    "includeExternalLinks": {
+      "title": "Include external links",
+      "type": "boolean",
+      "description": "Includes off-domain links in the bounded link-health sample. Defaults to false so the audit stays focused on the site you supplied. Enable when outbound-link QA is part of the job. It does not grant access to private destinations.",
+      "editor": "checkbox",
+      "default": false,
+      "example": false
+    },
+    "checkAiReadiness": {
+      "title": "Check AI crawler signals",
+      "type": "boolean",
+      "description": "Checks named AI crawler directives, llms.txt, and structured-data availability alongside conventional SEO signals. Defaults to true. Disable for a conventional technical audit only. It does not query ChatGPT, Gemini, Perplexity, or claim AI citations.",
+      "editor": "checkbox",
+      "default": true,
+      "example": true
+    },
+    "respectRobotsTxt": {
+      "title": "Respect robots.txt for discovery",
+      "type": "boolean",
+      "description": "Skips discovered same-origin pages disallowed for the default user-agent group. Defaults to true. robots.txt is still fetched and reported as an audit signal. This setting does not bypass access controls or authenticate private pages.",
+      "editor": "checkbox",
+      "default": true,
+      "example": true
+    },
+    "requestTimeoutMs": {
+      "title": "Request timeout (ms)",
+      "type": "integer",
+      "description": "Maximum time allowed for each public HTTP request. Defaults to 15000 milliseconds and accepts 3000 through 30000. Increase only for slow but authorized public sites. It is not a total run-time guarantee.",
+      "editor": "number",
+      "default": 15000,
+      "minimum": 3000,
+      "maximum": 30000,
+      "example": 15000
+    },
+    "previousSnapshot": {
+      "title": "Previous snapshot",
+      "type": "object",
+      "description": "Optional prior report summary used to calculate overall score change. Supply fields such as overallScore from an earlier run. Defaults to no comparison. Do not include credentials, cookies, analytics exports, or private URLs.",
+      "editor": "json",
+      "default": {},
+      "example": {
+        "overallScore": 76
+      }
+    },
+    "demoMode": {
+      "title": "Demo mode",
+      "type": "boolean",
+      "description": "Validates the run contract without fetching a site or charging the audit event. Defaults to false. Use for integration smoke tests only. It is not a real SEO report and returns no audited pages.",
+      "editor": "checkbox",
+      "default": false,
+      "example": false
+    }
+  },
+  "required": [
+    "siteUrl"
+  ]
+}

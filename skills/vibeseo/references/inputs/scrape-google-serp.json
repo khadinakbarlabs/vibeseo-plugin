@@ -1,0 +1,15 @@
+{
+  "queries": [
+    "agency client onboarding checklist"
+  ],
+  "maxResultsPages": 1,
+  "resultsPerPage": 10,
+  "countryCode": "US",
+  "languageCode": "en",
+  "includeAds": false,
+  "includeFeaturedSnippet": true,
+  "includePeopleAlsoAsk": true,
+  "includeRelatedSearches": true,
+  "includeKnowledgeGraph": false,
+  "maxConcurrency": 1
+}

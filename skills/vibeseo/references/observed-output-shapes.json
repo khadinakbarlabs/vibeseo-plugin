@@ -1,0 +1,650 @@
+{
+  "dataforseo-keyword-research": {
+    "sameBuildSuccessObserved": true,
+    "sampleHasRows": true,
+    "sampleShape": {
+      "runId": "str",
+      "mode": "str",
+      "keyword": "str",
+      "seedKeywords": {
+        "array": "str"
+      },
+      "searchVolume": "int",
+      "monthlySearches": {
+        "array": "object"
+      },
+      "cpcUsd": "float",
+      "competition": "float",
+      "competitionLevel": "str",
+      "keywordDifficulty": "int",
+      "searchIntent": "str",
+      "serpFeatures": {
+        "array": "empty"
+      },
+      "locationCode": "int",
+      "languageCode": "str",
+      "providerTaskId": "str",
+      "retrievedAt": "str",
+      "provenance": {
+        "source": "str",
+        "endpoint": "str"
+      }
+    },
+    "summaryShape": {
+      "outcome": "str",
+      "message": "str",
+      "itemsPushed": "int",
+      "itemsFailed": "int",
+      "invalidRecords": "int",
+      "chargedEventCounts": {
+        "keyword-research-result": "int"
+      },
+      "warnings": {
+        "array": "str"
+      },
+      "requested": {
+        "mode": "str",
+        "seedKeywords": {
+          "array": "str"
+        },
+        "locationCode": "int",
+        "languageCode": "str",
+        "maxResults": "int",
+        "minSearchVolume": "int",
+        "includeSerpInfo": "bool"
+      },
+      "endpoint": "str",
+      "providerTaskId": "str",
+      "providerRowsReturned": "int",
+      "startedAt": "str",
+      "completedAt": "str",
+      "runId": "str",
+      "buildNumber": "str",
+      "datasetId": "str",
+      "keyValueStoreId": "str",
+      "providerAttempts": "int",
+      "providerSuccesses": "int",
+      "providerFailures": "int",
+      "providerCostUsd": "float",
+      "rateLimitRetries": "int",
+      "rejectedKeywords": {
+        "array": "empty"
+      },
+      "credentialSource": "str"
+    },
+    "outputShape": {
+      "outcome": "str",
+      "message": "str",
+      "itemsPushed": "int",
+      "itemsFailed": "int",
+      "invalidRecords": "int",
+      "chargedEventCounts": {
+        "keyword-research-result": "int"
+      },
+      "warnings": {
+        "array": "str"
+      }
+    },
+    "outcome": "COMPLETE",
+    "evidence": "existing-run-shapes-only; not a new acceptance canary; no source rows stored"
+  },
+  "keyword-search-volume-api": {
+    "sameBuildSuccessObserved": true,
+    "sampleHasRows": true,
+    "sampleShape": {
+      "keyword": "str",
+      "normalizedKeyword": "str",
+      "countryName": "str",
+      "languageName": "str",
+      "searchVolume": "int",
+      "cpcUsd": "int",
+      "source": "str",
+      "fetchedAt": "str",
+      "status": "str",
+      "errorCode": "null",
+      "errorMessage": "null",
+      "providerTaskId": "str",
+      "competition": "null",
+      "competitionLevel": "null",
+      "lowTopOfPageBidUsd": "float",
+      "highTopOfPageBidUsd": "float",
+      "monthlySearches": {
+        "array": "object"
+      }
+    },
+    "summaryShape": {
+      "outcome": "str",
+      "message": "str",
+      "itemsPushed": "int",
+      "rowsPushed": "int",
+      "rowsNoData": "int",
+      "rowsErrored": "int",
+      "batchesTotal": "int",
+      "batchesSucceeded": "int",
+      "batchesFailed": "int",
+      "chargedEventCounts": {
+        "keyword-metric": "int",
+        "dataforseo-volume-request": "int"
+      },
+      "warnings": {
+        "array": "empty"
+      },
+      "inputKeywords": "int",
+      "uniqueKeywords": "int",
+      "billedKeywords": "int",
+      "startedAt": "str",
+      "completedAt": "str",
+      "runId": "str",
+      "buildNumber": "str",
+      "datasetId": "str",
+      "keyValueStoreId": "str",
+      "providerCostUsd": "float"
+    },
+    "outputShape": {
+      "outcome": "str",
+      "message": "str",
+      "itemsPushed": "int",
+      "rowsPushed": "int",
+      "rowsNoData": "int",
+      "rowsErrored": "int",
+      "batchesTotal": "int",
+      "batchesSucceeded": "int",
+      "batchesFailed": "int",
+      "chargedEventCounts": {
+        "keyword-metric": "int",
+        "dataforseo-volume-request": "int"
+      },
+      "warnings": {
+        "array": "empty"
+      }
+    },
+    "outcome": "COMPLETE",
+    "evidence": "existing-run-shapes-only; not a new acceptance canary; no source rows stored"
+  },
+  "scrape-google-serp": {
+    "sameBuildSuccessObserved": true,
+    "sampleHasRows": true,
+    "sampleShape": {
+      "search_query": "str",
+      "results_page": "int",
+      "total_results_count": "null",
+      "country_code": "str",
+      "language_code": "str",
+      "organic_results": {
+        "array": "object"
+      },
+      "featured_snippet": "null",
+      "people_also_ask": {
+        "array": "empty"
+      },
+      "related_searches": {
+        "array": "empty"
+      },
+      "knowledge_graph": "null",
+      "ad_results": {
+        "array": "empty"
+      },
+      "search_type": "str",
+      "scraped_at": "str",
+      "source_url": "str"
+    },
+    "summaryShape": {
+      "outcome": "str",
+      "itemsPushed": "int",
+      "pagesScraped": "int",
+      "failedPages": "int",
+      "rejectedStartUrls": {
+        "array": "empty"
+      },
+      "finishedAt": "str"
+    },
+    "outputShape": {
+      "outcome": "str",
+      "itemsPushed": "int",
+      "pagesScraped": "int",
+      "failedPages": "int",
+      "rejectedStartUrls": {
+        "array": "empty"
+      },
+      "finishedAt": "str"
+    },
+    "outcome": "COMPLETE",
+    "evidence": "existing-run-shapes-only; not a new acceptance canary; no source rows stored"
+  },
+  "seo-domain-keyword-scraper": {
+    "sameBuildSuccessObserved": true,
+    "sampleHasRows": true,
+    "sampleShape": {
+      "_note": "str",
+      "_status": "str"
+    },
+    "summaryShape": {
+      "outcome": "str",
+      "ok": "bool",
+      "itemCount": "int",
+      "finishedAt": "str"
+    },
+    "outputShape": {
+      "outcome": "str",
+      "ok": "bool",
+      "itemCount": "int",
+      "finishedAt": "str"
+    },
+    "outcome": "VALID_EMPTY",
+    "evidence": "existing-run-shapes-only; not a new acceptance canary; no source rows stored"
+  },
+  "backlink-opportunity-finder": {
+    "sameBuildSuccessObserved": true,
+    "sampleHasRows": true,
+    "sampleShape": {
+      "keyword": "str",
+      "opportunityType": "str",
+      "title": "str",
+      "url": "str",
+      "prospectDomain": "str",
+      "snippet": "str",
+      "sourceQuery": "str",
+      "resultPosition": "int",
+      "relevanceScore": "int",
+      "discoveryMethod": "str",
+      "countryCode": "str",
+      "languageCode": "str",
+      "discoveredAt": "str"
+    },
+    "summaryShape": {
+      "outcome": "str",
+      "message": "str",
+      "startedAt": "str",
+      "finishedAt": "str",
+      "buildNumber": "str",
+      "runId": "str",
+      "input": {
+        "keywordCount": "int",
+        "opportunityTypes": {
+          "array": "str"
+        },
+        "maxResultsPerKeyword": "int",
+        "maxPagesPerQuery": "int"
+      },
+      "itemsPushed": "int",
+      "itemsFailed": "int",
+      "invalidRecords": "int",
+      "chargedEventCounts": {
+        "apify-default-dataset-item": "int"
+      },
+      "chargeLimitReached": "bool",
+      "diagnostics": {
+        "queriesPlanned": "int",
+        "queriesAttempted": "int",
+        "queriesSucceeded": "int",
+        "queriesFailed": "int",
+        "excludedResults": "int",
+        "duplicateResults": "int",
+        "filteredResults": "int",
+        "invalidRecords": "int",
+        "writeFailures": "int",
+        "providerAttempts": {
+          "array": "object"
+        }
+      },
+      "warnings": {
+        "array": "empty"
+      }
+    },
+    "outputShape": {
+      "outcome": "str",
+      "message": "str",
+      "itemsPushed": "int",
+      "itemsFailed": "int",
+      "invalidRecords": "int",
+      "chargedEventCounts": {
+        "apify-default-dataset-item": "int"
+      },
+      "warnings": {
+        "array": "empty"
+      }
+    },
+    "outcome": "COMPLETE",
+    "evidence": "existing-run-shapes-only; not a new acceptance canary; no source rows stored"
+  },
+  "broken-link-checker": {
+    "sameBuildSuccessObserved": true,
+    "sampleHasRows": true,
+    "sampleShape": {
+      "url": "str",
+      "finalUrl": "str",
+      "status": "int",
+      "statusText": "str",
+      "classification": "str",
+      "isBroken": "bool",
+      "sourceUrl": "str",
+      "anchorText": "str",
+      "linkType": "str",
+      "allSources": {
+        "array": "object"
+      },
+      "method": "str",
+      "hops": "int",
+      "redirectChain": {
+        "array": "empty"
+      },
+      "durationMs": "int",
+      "error": "null",
+      "checkedAt": "str"
+    },
+    "summaryShape": {
+      "outcome": "str",
+      "message": "str",
+      "startedAt": "str",
+      "finishedAt": "str",
+      "mode": "str",
+      "startUrl": "str",
+      "requestedUrlCount": "int",
+      "totalDiscovered": "int",
+      "totalChecked": "int",
+      "totalBroken": "int",
+      "breakdown": {
+        "ok": "int",
+        "slow": "int",
+        "redirect_chain": "int",
+        "redirect_loop": "int",
+        "broken": "int",
+        "timeout": "int",
+        "dns_error": "int",
+        "ssl_error": "int",
+        "connection_refused": "int",
+        "blocked": "int",
+        "error": "int"
+      },
+      "chargeLimitReached": "bool",
+      "chargedEventCounts": {
+        "apify-actor-start": "int",
+        "link-checked": "int"
+      }
+    },
+    "outputShape": {
+      "outcome": "str",
+      "message": "str",
+      "startedAt": "str",
+      "finishedAt": "str",
+      "mode": "str",
+      "startUrl": "str",
+      "requestedUrlCount": "int",
+      "totalDiscovered": "int",
+      "totalChecked": "int",
+      "totalBroken": "int",
+      "breakdown": {
+        "ok": "int",
+        "slow": "int",
+        "redirect_chain": "int",
+        "redirect_loop": "int",
+        "broken": "int",
+        "timeout": "int",
+        "dns_error": "int",
+        "ssl_error": "int",
+        "connection_refused": "int",
+        "blocked": "int",
+        "error": "int"
+      },
+      "chargeLimitReached": "bool",
+      "chargedEventCounts": {
+        "apify-actor-start": "int",
+        "link-checked": "int"
+      }
+    },
+    "outcome": "COMPLETE",
+    "evidence": "existing-run-shapes-only; not a new acceptance canary; no source rows stored"
+  },
+  "complete-seo-audit": {
+    "sameBuildSuccessObserved": true,
+    "sampleHasRows": true,
+    "sampleShape": {
+      "siteUrl": "str",
+      "auditedAt": "str",
+      "pagesRequested": "int",
+      "pagesAudited": "int",
+      "crawlStatus": "str",
+      "overallScore": "int",
+      "categoryScores": {
+        "crawlability": "int",
+        "indexation": "int",
+        "onPage": "int",
+        "links": "int",
+        "structuredData": "int",
+        "performance": "int",
+        "security": "int",
+        "aiReadiness": "int"
+      },
+      "robotsStatus": "str",
+      "sitemapStatus": "str",
+      "sitemapUrlCount": "int",
+      "llmsStatus": "str",
+      "https": "bool",
+      "issueCounts": {
+        "critical": "int",
+        "warning": "int",
+        "info": "int"
+      },
+      "pages": {
+        "array": "object"
+      },
+      "internalLinkSummary": {
+        "totalInternalLinks": "int",
+        "uniqueInternalDestinations": "int",
+        "sampledInternalLinkDetails": "int",
+        "nofollowInternalLinks": "int",
+        "emptyAnchorInternalLinks": "int",
+        "checkedInternalLinks": "int",
+        "healthyInternalLinks": "int",
+        "redirectedInternalLinks": "int",
+        "brokenInternalLinks": "int",
+        "blockedInternalLinks": "int",
+        "timeoutInternalLinks": "int",
+        "pagesWithoutOutboundInternalLinks": {
+          "array": "empty"
+        },
+        "orphanCandidatePages": {
+          "array": "empty"
+        },
+        "detailsTruncated": "bool"
+      },
+      "internalLinks": {
+        "array": "empty"
+      },
+      "linkChecks": {
+        "array": "empty"
+      },
+      "issues": {
+        "array": "object"
+      },
+      "scoreChangeFromPreviousSnapshot": "null",
+      "warnings": {
+        "array": "empty"
+      }
+    },
+    "summaryShape": {
+      "outcome": "str",
+      "message": "str",
+      "runId": "str",
+      "startedAt": "str",
+      "finishedAt": "str",
+      "eventChargeUsd": "float",
+      "platformUsage": "str",
+      "audit": {
+        "siteUrl": "str",
+        "auditedAt": "str",
+        "pagesRequested": "int",
+        "pagesAudited": "int",
+        "crawlStatus": "str",
+        "overallScore": "int",
+        "categoryScores": "object",
+        "robotsStatus": "str",
+        "sitemapStatus": "str",
+        "sitemapUrlCount": "int",
+        "llmsStatus": "str",
+        "https": "bool",
+        "issueCounts": "object",
+        "pages": {
+          "array": "object"
+        },
+        "internalLinkSummary": "object",
+        "internalLinks": {
+          "array": "empty"
+        },
+        "linkChecks": {
+          "array": "empty"
+        },
+        "issues": {
+          "array": "object"
+        },
+        "scoreChangeFromPreviousSnapshot": "null",
+        "warnings": {
+          "array": "empty"
+        }
+      },
+      "pagesAudited": "int",
+      "itemsPushed": "int",
+      "issueCounts": {
+        "critical": "int",
+        "warning": "int",
+        "info": "int"
+      },
+      "chargedEventCounts": {
+        "seo-audit-completed": "int"
+      },
+      "chargeLimitReached": "bool",
+      "warnings": {
+        "array": "empty"
+      }
+    },
+    "outputShape": {
+      "outcome": "str",
+      "message": "str",
+      "runId": "str",
+      "audit": {
+        "siteUrl": "str",
+        "auditedAt": "str",
+        "pagesRequested": "int",
+        "pagesAudited": "int",
+        "crawlStatus": "str",
+        "overallScore": "int",
+        "categoryScores": "object",
+        "robotsStatus": "str",
+        "sitemapStatus": "str",
+        "sitemapUrlCount": "int",
+        "llmsStatus": "str",
+        "https": "bool",
+        "issueCounts": "object",
+        "pages": {
+          "array": "object"
+        },
+        "internalLinkSummary": "object",
+        "internalLinks": {
+          "array": "empty"
+        },
+        "linkChecks": {
+          "array": "empty"
+        },
+        "issues": {
+          "array": "object"
+        },
+        "scoreChangeFromPreviousSnapshot": "null",
+        "warnings": {
+          "array": "empty"
+        }
+      },
+      "pagesAudited": "int",
+      "itemsPushed": "int",
+      "issueCounts": {
+        "critical": "int",
+        "warning": "int",
+        "info": "int"
+      },
+      "chargedEventCounts": {
+        "seo-audit-completed": "int"
+      },
+      "eventChargeUsd": "float",
+      "chargeLimitReached": "bool",
+      "warnings": {
+        "array": "empty"
+      }
+    },
+    "outcome": "COMPLETE",
+    "evidence": "existing-run-shapes-only; not a new acceptance canary; no source rows stored"
+  },
+  "keyword-rank-tracker": {
+    "sameBuildSuccessObserved": true,
+    "sampleHasRows": true,
+    "sampleShape": {
+      "runId": "str",
+      "keyword": "str",
+      "targetDomain": "str",
+      "found": "bool",
+      "targetRank": "null",
+      "targetRankAbsolute": "null",
+      "rankingUrl": "null",
+      "rankingTitle": "null",
+      "rankingSnippet": "null",
+      "resultsChecked": "int",
+      "topResults": {
+        "array": "object"
+      },
+      "searchEngine": "str",
+      "locationCode": "int",
+      "languageCode": "str",
+      "device": "str",
+      "os": "str",
+      "depth": "int",
+      "checkUrl": "str",
+      "checkedAt": "str",
+      "providerTaskId": "str"
+    },
+    "summaryShape": {
+      "outcome": "str",
+      "message": "str",
+      "startedAt": "str",
+      "finishedAt": "str",
+      "buildNumber": "str",
+      "runId": "str",
+      "datasetId": "str",
+      "keyValueStoreId": "str",
+      "requestedKeywordCount": "int",
+      "uniqueKeywordCount": "int",
+      "duplicateKeywordCount": "int",
+      "processedKeywordCount": "int",
+      "failedKeywordCount": "int",
+      "itemsPushed": "int",
+      "invalidRecords": "int",
+      "writeFailures": "int",
+      "chargedEventCounts": {
+        "keyword-rank": "int"
+      },
+      "chargeLimitReached": "bool",
+      "providerAttempts": "int",
+      "providerSuccesses": "int",
+      "providerFailures": "int",
+      "providerCostUsd": "float",
+      "providerErrors": {
+        "array": "empty"
+      },
+      "warnings": {
+        "array": "empty"
+      }
+    },
+    "outputShape": {
+      "outcome": "str",
+      "message": "str",
+      "itemsPushed": "int",
+      "itemsFailed": "int",
+      "invalidRecords": "int",
+      "chargedEventCounts": {
+        "keyword-rank": "int"
+      },
+      "warnings": {
+        "array": "empty"
+      }
+    },
+    "outcome": "VALID_EMPTY",
+    "evidence": "existing-run-shapes-only; not a new acceptance canary; no source rows stored"
+  }
+}

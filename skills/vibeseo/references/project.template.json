@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "site": "example.com",
+  "business": { "product": "", "audience": "", "conversionGoal": "", "source": "user-provided" },
+  "market": { "country": "", "locationCode": null, "language": "", "device": "desktop" },
+  "outputDirectory": "chosen by user",
+  "createdAt": null,
+  "lastReviewedAt": null,
+  "verifiedPages": [],
+  "keywordClusters": [],
+  "decisions": [],
+  "openQuestions": [],
+  "runReceipts": [],
+  "actionsFile": "actions.csv",
+  "evidenceFile": "evidence.csv",
+  "approvalRule": "Current explicit operation-specific approval only; saved receipts are historical and do not authorize later runs or actions."
+}

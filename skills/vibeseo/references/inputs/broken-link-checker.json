@@ -1,0 +1,17 @@
+{
+  "mode": "list",
+  "urls": [
+    "https://example.com/"
+  ],
+  "maxPages": 1,
+  "maxLinksToCheck": 5,
+  "checkExternalLinks": false,
+  "checkAssets": false,
+  "onlyReportBroken": true,
+  "requestTimeoutMs": 15000,
+  "maxConcurrency": 1,
+  "maxRedirects": 3,
+  "proxyConfiguration": {
+    "useApifyProxy": false
+  }
+}

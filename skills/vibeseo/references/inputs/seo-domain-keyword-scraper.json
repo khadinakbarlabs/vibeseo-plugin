@@ -1,0 +1,8 @@
+{
+  "mode": "ranked_keywords",
+  "target": "example.com",
+  "locationCode": 2840,
+  "languageCode": "en",
+  "maxResults": 10,
+  "includeSerpInfo": false
+}

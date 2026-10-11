@@ -1,0 +1,148 @@
+{
+  "title": "Keyword Rank Tracker Input",
+  "description": "Check where a domain appears in Google organic results for a bounded keyword list and location. Rank-provider credentials are supplied by the user and are billed by the provider separately from Apify.",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "targetDomain": {
+      "title": "Target domain",
+      "type": "string",
+      "description": "Domain to find in Google organic results, such as example.com. A URL is accepted and normalized to its hostname; subdomains count as matches.",
+      "editor": "textfield",
+      "prefill": "apify.com",
+      "example": "apify.com",
+      "minLength": 1,
+      "maxLength": 253
+    },
+    "keywords": {
+      "title": "Keywords",
+      "type": "array",
+      "description": "One keyword or search phrase per line. The Actor checks each unique keyword and returns one row even when the target is not found within the selected depth.",
+      "editor": "stringList",
+      "prefill": [
+        "web scraping platform"
+      ],
+      "example": [
+        "web scraping platform",
+        "best data extraction tools"
+      ],
+      "minItems": 1,
+      "maxItems": 100,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 700
+      }
+    },
+    "locationCode": {
+      "title": "Google location code",
+      "type": "integer",
+      "description": "Google location code for the SERP check. The default 2840 is the United States; use a city or country location code for localized tracking.",
+      "editor": "number",
+      "default": 2840,
+      "minimum": 1,
+      "example": 2840
+    },
+    "languageCode": {
+      "title": "Google language code",
+      "type": "string",
+      "description": "Two-letter Google language code such as en, de, or fr.",
+      "editor": "textfield",
+      "default": "en",
+      "pattern": "^[a-zA-Z]{2,5}$",
+      "example": "en"
+    },
+    "device": {
+      "title": "Device",
+      "type": "string",
+      "description": "Device profile used for the Google SERP request. Mobile rankings can differ from desktop rankings.",
+      "editor": "select",
+      "default": "desktop",
+      "enum": [
+        "desktop",
+        "mobile"
+      ],
+      "enumTitles": [
+        "Desktop",
+        "Mobile"
+      ],
+      "example": "desktop"
+    },
+    "os": {
+      "title": "Operating system",
+      "type": "string",
+      "description": "Operating system paired with the device profile: windows or macos for desktop, android or ios for mobile.",
+      "editor": "select",
+      "default": "windows",
+      "enum": [
+        "windows",
+        "macos",
+        "android",
+        "ios"
+      ],
+      "enumTitles": [
+        "Windows",
+        "macOS",
+        "Android",
+        "iOS"
+      ],
+      "example": "windows"
+    },
+    "depth": {
+      "title": "SERP depth",
+      "type": "integer",
+      "description": "How many Google result positions to retrieve per keyword. Use 10 for the first page or up to 20 for a bounded second-page check; larger depths are outside this Actor's margin-safe billing envelope.",
+      "editor": "number",
+      "default": 10,
+      "minimum": 10,
+      "maximum": 20,
+      "example": 20
+    },
+    "maxKeywords": {
+      "title": "Maximum keywords",
+      "type": "integer",
+      "description": "Safety cap applied after duplicate removal. This keeps provider usage and the Apify run cost predictable.",
+      "editor": "number",
+      "default": 25,
+      "minimum": 1,
+      "maximum": 100,
+      "example": 10
+    },
+    "dataforSeoLogin": {
+      "title": "Rank-provider login (legacy key)",
+      "type": "string",
+      "description": "Legacy input key for the managed rank-provider login. Prefer rankProviderLogin or Actor environment secrets.",
+      "editor": "textfield",
+      "isSecret": true,
+      "example": "your-rank-provider-login"
+    },
+    "dataforSeoPassword": {
+      "title": "Rank-provider password (legacy key)",
+      "type": "string",
+      "description": "Legacy input key for the managed rank-provider password. Prefer rankProviderPassword or Actor environment secrets.",
+      "editor": "textfield",
+      "isSecret": true,
+      "example": "your-rank-provider-api-password"
+    },
+    "rankProviderLogin": {
+      "title": "Rank-provider login",
+      "type": "string",
+      "description": "Optional managed rank-provider API login/email. Prefer Actor environment secrets when possible. Never written to output.",
+      "editor": "textfield",
+      "isSecret": true,
+      "example": "your-rank-provider-login"
+    },
+    "rankProviderPassword": {
+      "title": "Rank-provider API password",
+      "type": "string",
+      "description": "Optional managed rank-provider API password. Sent only in the Authorization header and never written to output.",
+      "editor": "textfield",
+      "isSecret": true,
+      "example": "your-rank-provider-api-password"
+    }
+  },
+  "required": [
+    "targetDomain",
+    "keywords"
+  ]
+}

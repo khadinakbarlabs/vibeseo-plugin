@@ -1,0 +1,132 @@
+{
+  "$schema": "https://apify.com/schemas/v1/input.ide.json",
+  "title": "Keyword Search Volume API",
+  "description": "Bulk Google keyword search volume + CPC using the keyword-data API. Free tier returns up to 25 keywords; bulk_paid supports up to 1,000 per run. One dataset row per keyword, billed only for valid rows.",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "keywords": {
+      "title": "Keywords",
+      "type": "array",
+      "description": "List of keywords to look up. Each keyword gets one row with searchVolume, CPC, competition, and bid estimates. Duplicates are removed. Free tier caps at 25; bulk_paid caps at 1,000.",
+      "editor": "stringList",
+      "prefill": [
+        "buy crm software",
+        "saas project management",
+        "email marketing tool"
+      ],
+      "example": [
+        "buy crm software",
+        "saas project management"
+      ],
+      "minItems": 1,
+      "maxItems": 1000,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 200
+      }
+    },
+    "mode": {
+      "title": "Mode",
+      "type": "string",
+      "description": "free_tier returns up to 25 keywords for evaluation. bulk_paid processes up to 1,000 keywords per run for production use. Use free_tier to validate credentials and output before a paid bulk run.",
+      "editor": "select",
+      "default": "free_tier",
+      "enum": [
+        "free_tier",
+        "bulk_paid"
+      ],
+      "enumTitles": [
+        "Free tier (up to 25 keywords)",
+        "Bulk paid (up to 1,000 keywords)"
+      ],
+      "example": "free_tier"
+    },
+    "countryName": {
+      "title": "Country",
+      "type": "string",
+      "description": "the keyword-data API country name for search volume context. Defaults to United States. Use exact country names as the keyword-data API expects them, such as United Kingdom, Germany, or India.",
+      "editor": "textfield",
+      "default": "United States",
+      "example": "United Kingdom"
+    },
+    "languageName": {
+      "title": "Language",
+      "type": "string",
+      "description": "the keyword-data API language name matching the selected country, such as English, German, or Spanish. Defaults to English.",
+      "editor": "textfield",
+      "default": "English",
+      "example": "English"
+    },
+    "includeCompetition": {
+      "title": "Include competition score",
+      "type": "boolean",
+      "description": "Return competition (0-1 float) and competitionLevel (LOW/MEDIUM/HIGH) from Google Ads. Included by default.",
+      "editor": "checkbox",
+      "default": true,
+      "example": true
+    },
+    "includeLowTopOfPageBid": {
+      "title": "Include low top-of-page bid",
+      "type": "boolean",
+      "description": "Return lowTopOfPageBidUsd (Google Ads low bid estimate). Included by default.",
+      "editor": "checkbox",
+      "default": true,
+      "example": true
+    },
+    "includeHighTopOfPageBid": {
+      "title": "Include high top-of-page bid",
+      "type": "boolean",
+      "description": "Return highTopOfPageBidUsd (Google Ads high bid estimate). Included by default.",
+      "editor": "checkbox",
+      "default": true,
+      "example": true
+    },
+    "maxKeywordsPerBatch": {
+      "title": "Keywords per batch",
+      "type": "integer",
+      "description": "Number of keywords sent in each the keyword-data API API request. Default 700; maximum 1000.",
+      "editor": "number",
+      "default": 700,
+      "minimum": 1,
+      "maximum": 1000,
+      "example": 700
+    },
+    "onPartialFailure": {
+      "title": "On batch failure",
+      "type": "string",
+      "description": "return_partial saves all successful batches and marks the run PARTIAL. fail_if_any_batch_fails stops immediately on the first batch error.",
+      "editor": "select",
+      "default": "return_partial",
+      "enum": [
+        "return_partial",
+        "fail_if_any_batch_fails"
+      ],
+      "enumTitles": [
+        "Return partial results (recommended)",
+        "Fail if any batch fails"
+      ],
+      "example": "return_partial"
+    },
+    "dataforSeoLogin": {
+      "title": "DataForSEO login (optional override)",
+      "type": "string",
+      "description": "Your DataForSEO API login email. Used only when the DATAFORSEO_LOGIN actor secret is unavailable. Keep this private.",
+      "editor": "textfield",
+      "isSecret": true,
+      "example": "your-dataforseo-login@example.com"
+    },
+    "dataforSeoPassword": {
+      "title": "DataForSEO password (optional override)",
+      "type": "string",
+      "description": "Your DataForSEO API password. Used only when the DATAFORSEO_PASSWORD actor secret is unavailable. Keep this private.",
+      "editor": "textfield",
+      "isSecret": true,
+      "example": "your-dataforseo-api-password"
+    }
+  },
+  "required": [
+    "keywords"
+  ]
+}

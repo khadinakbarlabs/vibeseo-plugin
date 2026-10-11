@@ -1,0 +1,11 @@
+{
+  "keywords": [
+    "agency task management",
+    "client onboarding checklist"
+  ],
+  "mode": "free_tier",
+  "countryName": "United States",
+  "languageName": "English",
+  "maxKeywordsPerBatch": 5,
+  "onPartialFailure": "return_partial"
+}

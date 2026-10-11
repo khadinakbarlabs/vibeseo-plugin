@@ -1,0 +1,12 @@
+{
+  "siteUrl": "https://example.com/",
+  "maxPages": 3,
+  "checkLinks": true,
+  "maxLinksPerPage": 3,
+  "maxInternalLinksPerPage": 5,
+  "includeExternalLinks": false,
+  "checkAiReadiness": true,
+  "respectRobotsTxt": true,
+  "requestTimeoutMs": 15000,
+  "demoMode": false
+}

@@ -1,0 +1,100 @@
+{
+  "title": "SEO Domain & Keyword Scraper",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "mode": {
+      "title": "Mode",
+      "type": "string",
+      "description": "Which SEO dataset to pull. 'domain_overview' = traffic/keyword totals for a domain. 'ranked_keywords' = every keyword a domain ranks for. 'keyword_overview' = metrics for keywords you supply. 'keyword_ideas' = related keyword suggestions from seeds. 'competitors' = organic competitor domains. 'backlinks_summary' = backlink profile totals. Defaults to 'domain_overview'.",
+      "enum": [
+        "domain_overview",
+        "ranked_keywords",
+        "keyword_overview",
+        "keyword_ideas",
+        "competitors",
+        "backlinks_summary"
+      ],
+      "enumTitles": [
+        "Domain Overview",
+        "Ranked Keywords (Organic Research)",
+        "Keyword Overview",
+        "Keyword Ideas (Keyword Magic)",
+        "Competitors",
+        "Backlinks Summary"
+      ],
+      "default": "domain_overview",
+      "prefill": "domain_overview"
+    },
+    "target": {
+      "title": "Target domain",
+      "type": "string",
+      "description": "Domain to analyze, e.g. 'apple.com'. Used by domain_overview, ranked_keywords, competitors and backlinks_summary. Strip https:// and www — both are handled if present. NOT a keyword; for keyword modes use the 'keywords' field instead.",
+      "editor": "textfield",
+      "prefill": "apple.com",
+      "example": "nike.com"
+    },
+    "keywords": {
+      "title": "Keywords",
+      "type": "array",
+      "description": "Keyword phrases for 'keyword_overview' (metrics for these exact terms) or 'keyword_ideas' (suggestions seeded from these). Example: [\"seo tools\", \"keyword research\"]. Ignored by domain/competitor/backlink modes. Max 700 for overview, 200 for ideas.",
+      "editor": "stringList",
+      "prefill": [
+        "seo tools",
+        "keyword research"
+      ],
+      "example": [
+        "running shoes",
+        "marathon training"
+      ]
+    },
+    "dataforSeoLogin": {
+      "title": "DataForSEO API login (email)",
+      "type": "string",
+      "description": "Your DataForSEO API login — the email you registered with at https://app.dataforseo.com/api-access. DataForSEO API usage is billed on YOUR DataForSEO account, separate from Apify charges. Stored as a secret. NOT your Apify token.",
+      "editor": "textfield",
+      "isSecret": true
+    },
+    "dataforSeoPassword": {
+      "title": "DataForSEO API password",
+      "type": "string",
+      "description": "Your DataForSEO API password from https://app.dataforseo.com/api-access (the auto-generated API password, NOT your dashboard login password). Stored as a secret and never logged.",
+      "editor": "textfield",
+      "isSecret": true
+    },
+    "locationCode": {
+      "title": "Location code",
+      "type": "integer",
+      "description": "the keyword-data API numeric location code for the market. 2840 = United States, 2826 = United Kingdom, 2124 = Canada, 2036 = Australia, 2356 = India. Defaults to 2840 (US). See the keyword-data API locations endpoint for the full list.",
+      "editor": "number",
+      "default": 2840,
+      "prefill": 2840
+    },
+    "languageCode": {
+      "title": "Language code",
+      "type": "string",
+      "description": "Two-letter language code matching the location, e.g. 'en' (English), 'es' (Spanish), 'de' (German), 'fr' (French). Defaults to 'en'. Must be a language the keyword-data API supports for the chosen location.",
+      "editor": "textfield",
+      "default": "en",
+      "prefill": "en"
+    },
+    "maxResults": {
+      "title": "Max results",
+      "type": "integer",
+      "description": "Maximum rows to return for list modes (ranked_keywords, keyword_ideas, competitors, keyword_overview). 1-1000. Ignored by report modes (domain_overview, backlinks_summary), which always return one record. Defaults to 100.",
+      "editor": "number",
+      "default": 100,
+      "prefill": 100,
+      "minimum": 1,
+      "maximum": 1000
+    },
+    "includeSerpInfo": {
+      "title": "Include SERP info",
+      "type": "boolean",
+      "description": "When true, keyword_overview and keyword_ideas also request SERP feature data from the keyword-data API (raises the keyword-data API cost on your key). Defaults to false. No effect on other modes.",
+      "editor": "checkbox",
+      "default": false
+    }
+  },
+  "required": []
+}

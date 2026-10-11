@@ -1,0 +1,38 @@
+{
+  "full_name": "zubair-trabzada/geo-seo-claude",
+  "html_url": "https://github.com/zubair-trabzada/geo-seo-claude",
+  "description": "GEO-first SEO skill for Claude Code. Comprehensive AI search optimization for any website \u2014 citability scoring, AI crawler analysis, brand authority, schema markup, platform-specific optimization, and PDF reports.  If you want learn how to sell this to real businesses, check out the skool community",
+  "stargazers_count": 10995,
+  "forks_count": 1675,
+  "default_branch": "main",
+  "updated_at": "2026-10-11T06:51:41Z",
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "commit": "989cae01e8ebbc42a9ec798eb9e7cb423f5ec89c",
+  "inspected_at": "2026-10-11T07:59:46.843202+00:00",
+  "candidate_files": [
+    "LICENSE",
+    "README.md",
+    "geo/SKILL.md",
+    "skills/geo-audit/SKILL.md",
+    "skills/geo-brand-mentions/SKILL.md",
+    "skills/geo-citability/SKILL.md",
+    "skills/geo-compare/SKILL.md",
+    "skills/geo-content/SKILL.md",
+    "skills/geo-crawlers/SKILL.md",
+    "skills/geo-llmstxt/SKILL.md",
+    "skills/geo-platform-optimizer/SKILL.md",
+    "skills/geo-proposal/SKILL.md",
+    "skills/geo-prospect/SKILL.md",
+    "skills/geo-report-pdf/SKILL.md",
+    "skills/geo-report/SKILL.md",
+    "skills/geo-schema/SKILL.md",
+    "skills/geo-technical/SKILL.md",
+    "skills/geo-update/SKILL.md"
+  ]
+}

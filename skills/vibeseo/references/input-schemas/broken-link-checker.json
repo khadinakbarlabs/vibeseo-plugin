@@ -1,0 +1,138 @@
+{
+  "$schema": "https://apify.com/schemas/v1/input.ide.json",
+  "title": "Broken Link Checker",
+  "description": "<p>Crawl a website, scan a URL list, or verify all URLs from a sitemap.xml. Returns every broken link with the source page, anchor text, HTTP status, redirect chain, response time, and failure class. Use for SEO audits, content QA, and site migration validation.</p>",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "mode": {
+      "title": "Input mode",
+      "type": "string",
+      "description": "How URLs are sourced. 'crawl' starts at startUrl and crawls the site to maxPages, extracting and verifying every link found. 'list' verifies only the URLs in the urls array (no crawling). 'sitemap' fetches sitemap.xml from startUrl and verifies every URL found. Default: 'crawl'. Choose 'list' for outreach link audits and 'sitemap' for full-site URL coverage without crawling overhead.",
+      "editor": "select",
+      "enum": [
+        "crawl",
+        "list",
+        "sitemap"
+      ],
+      "enumTitles": [
+        "Crawl a website",
+        "Check a list of URLs",
+        "Verify URLs from sitemap.xml"
+      ],
+      "default": "crawl"
+    },
+    "startUrl": {
+      "title": "Crawl/sitemap start URL",
+      "type": "string",
+      "description": "The URL to start crawling from (mode='crawl') or the sitemap.xml URL (mode='sitemap'). Must include the protocol — example: 'https://example.com' or 'https://example.com/sitemap.xml'. Crawler stays within the same registrable domain by default. Ignored when mode='list'.",
+      "editor": "textfield",
+      "prefill": "https://crawler-test.com/links/broken_links_internal",
+      "example": "https://example.com"
+    },
+    "urls": {
+      "title": "URLs to verify (list mode only)",
+      "type": "array",
+      "description": "List of URLs to check directly without crawling. Used only when mode='list'. Each entry must be a full URL including protocol — example: ['https://example.com/page1', 'https://example.com/missing']. Up to 5000 URLs per run. Ignored when mode='crawl' or 'sitemap'.",
+      "editor": "stringList",
+      "prefill": [
+        "https://example.com",
+        "https://example.com/this-page-does-not-exist",
+        "https://httpstat.us/404",
+        "https://httpstat.us/500"
+      ],
+      "items": {
+        "type": "string",
+        "pattern": "^https?:\\/\\/.+"
+      }
+    },
+    "maxPages": {
+      "title": "Max pages to crawl",
+      "type": "integer",
+      "description": "Maximum number of internal pages to crawl (mode='crawl' only). Higher values find more broken links but take longer. Default: 50. Set to a small value (5-10) for quick audits; 200-500 for thorough site reviews.",
+      "default": 50,
+      "minimum": 1,
+      "maximum": 5000
+    },
+    "maxLinksToCheck": {
+      "title": "Max links to verify",
+      "type": "integer",
+      "description": "Maximum number of unique links to verify per run. Caps cost on link-heavy sites. Default: 500. Each verified link triggers a 'link-checked' charge of $0.001.",
+      "default": 500,
+      "minimum": 1,
+      "maximum": 10000
+    },
+    "checkExternalLinks": {
+      "title": "Check external links",
+      "type": "boolean",
+      "description": "Verify links pointing to other domains, not just internal links. Default: true. Set to false to focus only on same-domain links and reduce cost (typically halves the link count).",
+      "default": true
+    },
+    "checkAssets": {
+      "title": "Check images, scripts, and stylesheets",
+      "type": "boolean",
+      "description": "Also verify <img>, <script>, <link>, and <iframe> resource URLs in addition to <a> hyperlinks. Default: false. Enable for full content audits; disable for hyperlink-only checks (faster and cheaper).",
+      "default": false
+    },
+    "onlyReportBroken": {
+      "title": "Only report broken links",
+      "type": "boolean",
+      "description": "If true, dataset contains only broken/failing links (status >= 400, timeouts, errors). If false, every checked link is recorded with its status. Default: true. Set to false to get a complete link inventory with response times.",
+      "default": true
+    },
+    "slowThresholdMs": {
+      "title": "Slow link threshold (ms)",
+      "type": "integer",
+      "description": "Response time in milliseconds above which a link is classified as 'slow'. Default: 5000. Slow links are reported (status 200 + slow flag) so you can find performance issues without classifying them as broken.",
+      "default": 5000,
+      "minimum": 100,
+      "maximum": 60000
+    },
+    "requestTimeoutMs": {
+      "title": "Request timeout (ms)",
+      "type": "integer",
+      "description": "Maximum time to wait for a response before classifying a link as 'timeout'. Default: 15000 (15s). Increase for slow targets; decrease to fail fast on dead sites.",
+      "default": 15000,
+      "minimum": 1000,
+      "maximum": 60000
+    },
+    "maxConcurrency": {
+      "title": "Max parallel requests",
+      "type": "integer",
+      "description": "Number of concurrent HTTP requests during link verification. Default: 20. Higher values are faster but may trigger rate limits on small sites. Reduce to 5-10 for fragile or rate-limited targets.",
+      "default": 20,
+      "minimum": 1,
+      "maximum": 100
+    },
+    "maxRedirects": {
+      "title": "Max redirects to follow",
+      "type": "integer",
+      "description": "Maximum redirect hops to follow per URL before classifying as 'redirect_loop'. Default: 10. Redirect chains longer than 2 hops are flagged as 'redirect_chain' (still a 200 but worth reviewing).",
+      "default": 10,
+      "minimum": 0,
+      "maximum": 30
+    },
+    "userAgent": {
+      "title": "User-Agent header",
+      "type": "string",
+      "description": "Custom User-Agent string sent on every request. Default identifies as ApifyBrokenLinkChecker. Use a browser UA if a target site blocks bots; leave default for transparency and lower block rate.",
+      "editor": "textfield",
+      "default": "Mozilla/5.0 (compatible; ApifyBrokenLinkChecker/1.0; +https://apify.com)"
+    },
+    "proxyConfiguration": {
+      "title": "Proxy configuration",
+      "type": "object",
+      "description": "Proxy settings for outbound requests. Default: no proxy (direct, fastest). Enable Apify Proxy only if a target site blocks your IP — most link checks work fine without proxies. Use residential group only when datacenter is blocked.",
+      "editor": "proxy",
+      "prefill": {
+        "useApifyProxy": false
+      },
+      "default": {
+        "useApifyProxy": false
+      }
+    }
+  },
+  "required": [
+    "mode"
+  ]
+}

@@ -1,0 +1,858 @@
+{
+  "dataforseo-keyword-research": {
+    "id": "8RW7Ow9S3hRAnX1ye",
+    "name": "dataforseo-keyword-research",
+    "username": "khadinakbar",
+    "title": "Keyword Search Volume Finder \u2014 Ahrefs Alternative",
+    "isPublic": true,
+    "buildId": "XZijq1urUrU7bxzTb",
+    "buildNumber": "1.0.13",
+    "buildStatus": "SUCCEEDED",
+    "modifiedAt": "2026-10-04T15:15:33.182Z",
+    "defaultRunOptions": {
+      "build": "latest",
+      "timeoutSecs": 3600,
+      "memoryMbytes": 4096
+    },
+    "pricingInfos": [
+      {
+        "pricingModel": "PAY_PER_EVENT",
+        "isPPEPlatformUsagePaidByUser": true,
+        "pricingPerEvent": {
+          "actorChargeEvents": {
+            "apify-actor-start": {
+              "eventTitle": "Actor Start",
+              "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+              "eventPriceUsd": 5e-05,
+              "isOneTimeEvent": true
+            },
+            "keyword-research-result": {
+              "eventTitle": "Keyword research result",
+              "eventDescription": "Charged once for each validated DataForSEO keyword row persisted to the dataset.",
+              "eventPriceUsd": 0.01,
+              "isPrimaryEvent": true
+            }
+          }
+        },
+        "createdAt": "2026-08-10T17:54:48.856Z",
+        "startedAt": "2026-08-10T17:54:48.856Z",
+        "apifyMarginPercentage": 0.2
+      },
+      {
+        "pricingModel": "PAY_PER_EVENT",
+        "pricingPerEvent": {
+          "actorChargeEvents": {
+            "apify-actor-start": {
+              "eventTitle": "Actor Start",
+              "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+              "eventPriceUsd": 5e-05,
+              "isOneTimeEvent": true
+            },
+            "keyword-research-result": {
+              "eventTitle": "Keyword research result",
+              "eventDescription": "Charged once for each validated DataForSEO keyword row persisted to the dataset.",
+              "eventPriceUsd": 0.01,
+              "isPrimaryEvent": true
+            }
+          }
+        },
+        "reasonForChange": "Wave-185 margin: disable PPE platform usage pass-through (usagePct<10 from Wave-200); event prices unchanged",
+        "createdAt": "2026-09-10T13:10:01.769Z",
+        "startedAt": "2026-09-10T13:10:01.769Z",
+        "apifyMarginPercentage": 0.2,
+        "notifiedAboutChangeAt": "2026-09-10T13:35:43.883Z"
+      }
+    ],
+    "schema": "input-schemas/dataforseo-keyword-research.json",
+    "checkedAt": "2026-10-11T08:01:04.323931+00:00",
+    "recentRunStatuses": [
+      "SUCCEEDED",
+      "SUCCEEDED",
+      "SUCCEEDED",
+      "SUCCEEDED",
+      "SUCCEEDED"
+    ],
+    "qualification": "live-metadata-and-schema-readback; no-new-run"
+  },
+  "keyword-search-volume-api": {
+    "id": "B7Wq9VHcVFdfNqNBI",
+    "name": "keyword-search-volume-api",
+    "username": "khadinakbar",
+    "title": "Keyword Search Volume API \u2014 Bulk Google Volume + CPC",
+    "isPublic": true,
+    "buildId": "V55G0QnEDH9KDSzt0",
+    "buildNumber": "0.1.7",
+    "buildStatus": "SUCCEEDED",
+    "modifiedAt": "2026-10-04T14:46:17.210Z",
+    "defaultRunOptions": {
+      "build": "latest",
+      "timeoutSecs": 300,
+      "memoryMbytes": 256
+    },
+    "pricingInfos": [
+      {
+        "pricingModel": "PAY_PER_EVENT",
+        "isPPEPlatformUsagePaidByUser": true,
+        "pricingPerEvent": {
+          "actorChargeEvents": {
+            "apify-actor-start": {
+              "eventTitle": "Actor Start",
+              "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+              "eventPriceUsd": 5e-05
+            },
+            "dataforseo-volume-request": {
+              "eventTitle": "DataForSEO volume request",
+              "eventDescription": "Charged once for each successful DataForSEO Google Ads search-volume batch.",
+              "eventPriceUsd": 0.3
+            },
+            "keyword-metric": {
+              "eventTitle": "Keyword metric row",
+              "eventDescription": "Charged once for each keyword row persisted (OK or NO_DATA).",
+              "eventPriceUsd": 0.004,
+              "isPrimaryEvent": true
+            }
+          }
+        },
+        "createdAt": "2026-08-18T13:17:44.452Z",
+        "startedAt": "2026-08-18T13:17:44.452Z",
+        "apifyMarginPercentage": 0.2
+      },
+      {
+        "pricingModel": "PAY_PER_EVENT",
+        "pricingPerEvent": {
+          "actorChargeEvents": {
+            "apify-actor-start": {
+              "eventTitle": "Actor Start",
+              "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+              "eventPriceUsd": 5e-05
+            },
+            "dataforseo-volume-request": {
+              "eventTitle": "DataForSEO volume request",
+              "eventDescription": "Charged once for each successful DataForSEO Google Ads search-volume batch.",
+              "eventPriceUsd": 0.3
+            },
+            "keyword-metric": {
+              "eventTitle": "Keyword metric row",
+              "eventDescription": "Charged once for each keyword row persisted (OK or NO_DATA).",
+              "eventPriceUsd": 0.004,
+              "isPrimaryEvent": true
+            }
+          }
+        },
+        "reasonForChange": "Wave-185 margin: disable PPE platform usage pass-through (usagePct<10 from Wave-200); event prices unchanged",
+        "createdAt": "2026-09-10T13:08:15.953Z",
+        "startedAt": "2026-09-10T13:08:15.953Z",
+        "apifyMarginPercentage": 0.2,
+        "notifiedAboutChangeAt": "2026-09-10T13:35:43.650Z"
+      }
+    ],
+    "schema": "input-schemas/keyword-search-volume-api.json",
+    "checkedAt": "2026-10-11T08:01:04.703980+00:00",
+    "recentRunStatuses": [
+      "SUCCEEDED",
+      "SUCCEEDED",
+      "SUCCEEDED",
+      "SUCCEEDED",
+      "SUCCEEDED"
+    ],
+    "qualification": "live-metadata-and-schema-readback; no-new-run"
+  },
+  "scrape-google-serp": {
+    "id": "z0r97dqhtUQk2AXd8",
+    "name": "scrape-google-serp",
+    "username": "khadinakbar",
+    "title": "Google SERP Scraper \u2014 Search Results & SERP API",
+    "isPublic": true,
+    "buildId": "ZnPFdByDFDsblxVt8",
+    "buildNumber": "1.0.21",
+    "buildStatus": "SUCCEEDED",
+    "modifiedAt": "2026-10-04T15:17:21.325Z",
+    "defaultRunOptions": {
+      "build": "latest",
+      "memoryMbytes": 4096,
+      "timeoutSecs": 3600
+    },
+    "pricingInfos": [
+      {
+        "minimalMaxTotalChargeUsd": null,
+        "pricingModel": "PAY_PER_EVENT",
+        "isPriceChangeNotificationSuppressed": false,
+        "pricingPerEvent": {
+          "actorChargeEvents": {
+            "apify-actor-start": {
+              "eventTitle": "Actor Start",
+              "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+              "isOneTimeEvent": true,
+              "eventPriceUsd": 5e-05
+            },
+            "scraped-serp-page": {
+              "eventTitle": "page",
+              "eventDescription": "Price per serp page scraped",
+              "isOneTimeEvent": false,
+              "eventPriceUsd": 0.0018,
+              "isPrimaryEvent": true
+            }
+          }
+        },
+        "createdAt": "2026-04-08T17:44:56.428Z",
+        "startedAt": "2026-04-08T17:44:56.428Z",
+        "apifyMarginPercentage": 0.2
+      },
+      {
+        "minimalMaxTotalChargeUsd": null,
+        "isPPEPlatformUsagePaidByUser": true,
+        "pricingModel": "PAY_PER_EVENT",
+        "isPriceChangeNotificationSuppressed": true,
+        "pricingPerEvent": {
+          "actorChargeEvents": {
+            "scraped-serp-page": {
+              "eventTitle": "page",
+              "eventDescription": "Price per serp page scraped",
+              "isOneTimeEvent": false,
+              "eventPriceUsd": 0.0018,
+              "isPrimaryEvent": true
+            },
+            "apify-actor-start": {
+              "eventTitle": "Actor Start",
+              "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+              "isOneTimeEvent": true,
+              "eventPriceUsd": 5e-05
+            }
+          }
+        },
+        "createdAt": "2026-04-27T08:15:48.530Z",
+        "startedAt": "2026-04-27T08:15:48.530Z",
+        "apifyMarginPercentage": 0.2
+      },
+      {
+        "pricingModel": "PAY_PER_EVENT",
+        "apifyMarginPercentage": 0.2,
+        "pricingPerEvent": {
+          "actorChargeEvents": {
+            "scraped-serp-page": {
+              "eventTitle": "page",
+              "eventDescription": "Price per serp page scraped",
+              "isOneTimeEvent": false,
+              "eventPriceUsd": 0.0018,
+              "isPrimaryEvent": true
+            },
+            "apify-actor-start": {
+              "eventTitle": "Actor Start",
+              "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+              "isOneTimeEvent": true,
+              "eventPriceUsd": 5e-05
+            }
+          }
+        },
+        "createdAt": "2026-07-21T17:05:15.429Z",
+        "startedAt": "2026-07-21T17:05:15.429Z",
+        "notifiedAboutChangeAt": "2026-07-21T17:05:56.390Z"
+      },
+      {
+        "pricingModel": "PAY_PER_EVENT",
+        "pricingPerEvent": {
+          "actorChargeEvents": {
+            "scraped-serp-page": {
+              "eventTitle": "page",
+              "eventDescription": "Price per serp page scraped",
+              "isOneTimeEvent": false,
+              "eventPriceUsd": 0.0018,
+              "isPrimaryEvent": true
+            },
+            "apify-actor-start": {
+              "eventTitle": "Actor Start",
+              "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+              "isOneTimeEvent": true,
+              "eventPriceUsd": 5e-05
+            }
+          }
+        },
+        "apifyMarginPercentage": 0.2,
+        "minimalMaxTotalChargeUsd": null,
+        "isPPEPlatformUsagePaidByUser": true,
+        "reasonForChange": "Restore required Pay per event plus platform usage pass-through.",
+        "startedAt": "2026-08-04T20:29:34.070Z",
+        "createdAt": "2026-07-21T20:21:32.585Z",
+        "notifiedAboutFutureChangeAt": "2026-07-21T20:21:53.092Z",
+        "notifiedAboutChangeAt": "2026-08-05T15:06:36.133Z"
+      }
+    ],
+    "schema": "input-schemas/scrape-google-serp.json",
+    "checkedAt": "2026-10-11T08:01:03.962527+00:00",
+    "recentRunStatuses": [
+      "SUCCEEDED",
+      "SUCCEEDED",
+      "SUCCEEDED",
+      "SUCCEEDED",
+      "SUCCEEDED"
+    ],
+    "qualification": "live-metadata-and-schema-readback; no-new-run"
+  },
+  "seo-domain-keyword-scraper": {
+    "id": "7XL6DUjjDCqltKeBg",
+    "name": "seo-domain-keyword-scraper",
+    "username": "khadinakbar",
+    "title": "Domain Keyword Analyzer \u2014 Semrush Alternative",
+    "isPublic": true,
+    "buildId": "72dIyKcbJmGROma5K",
+    "buildNumber": "1.0.8",
+    "buildStatus": "SUCCEEDED",
+    "modifiedAt": "2026-10-04T16:28:29.114Z",
+    "defaultRunOptions": {
+      "build": "latest",
+      "timeoutSecs": 300,
+      "memoryMbytes": 512
+    },
+    "pricingInfos": [
+      {
+        "pricingModel": "PAY_PER_EVENT",
+        "pricingPerEvent": {
+          "actorChargeEvents": {
+            "apify-actor-start": {
+              "eventTitle": "Actor Start",
+              "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+              "eventPriceUsd": 5e-05
+            },
+            "result": {
+              "eventTitle": "Result row",
+              "eventDescription": "Charged per keyword, competitor, or ranked-keyword row returned.",
+              "eventPriceUsd": 0.005,
+              "isPrimaryEvent": true
+            },
+            "report": {
+              "eventTitle": "Domain/backlink report",
+              "eventDescription": "Charged per single-object report (domain overview or backlinks summary).",
+              "eventPriceUsd": 0.02
+            }
+          }
+        },
+        "createdAt": "2026-06-25T19:07:24.172Z",
+        "startedAt": "2026-06-25T19:07:24.172Z",
+        "apifyMarginPercentage": 0.2
+      },
+      {
+        "minimalMaxTotalChargeUsd": null,
+        "isPPEPlatformUsagePaidByUser": true,
+        "pricingModel": "PAY_PER_EVENT",
+        "isPriceChangeNotificationSuppressed": false,
+        "pricingPerEvent": {
+          "actorChargeEvents": {
+            "result": {
+              "eventTitle": "Result row",
+              "eventDescription": "Charged per keyword, competitor, or ranked-keyword row returned.",
+              "isOneTimeEvent": false,
+              "eventPriceUsd": 0.005,
+              "isPrimaryEvent": true
+            },
+            "report": {
+              "eventTitle": "Domain/backlink report",
+              "eventDescription": "Charged per single-object report (domain overview or backlinks summary).",
+              "isOneTimeEvent": false,
+              "eventPriceUsd": 0.02
+            },
+            "apify-actor-start": {
+              "eventTitle": "Actor Start",
+              "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+              "isOneTimeEvent": true,
+              "eventPriceUsd": 5e-05
+            }
+          }
+        },
+        "startedAt": "2026-07-05T11:57:18.439Z",
+        "createdAt": "2026-07-05T11:57:19.000Z",
+        "apifyMarginPercentage": 0.2
+      },
+      {
+        "pricingModel": "PAY_PER_EVENT",
+        "apifyMarginPercentage": 0.2,
+        "pricingPerEvent": {
+          "actorChargeEvents": {
+            "result": {
+              "eventTitle": "Result row",
+              "eventDescription": "Charged per keyword, competitor, or ranked-keyword row returned.",
+              "isOneTimeEvent": false,
+              "eventPriceUsd": 0.005,
+              "isPrimaryEvent": true
+            },
+            "report": {
+              "eventTitle": "Domain/backlink report",
+              "eventDescription": "Charged per single-object report (domain overview or backlinks summary).",
+              "isOneTimeEvent": false,
+              "eventPriceUsd": 0.02
+            },
+            "apify-actor-start": {
+              "eventTitle": "Actor Start",
+              "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+              "isOneTimeEvent": true,
+              "eventPriceUsd": 5e-05
+            }
+          }
+        },
+        "createdAt": "2026-07-21T17:08:21.459Z",
+        "startedAt": "2026-07-21T17:08:21.459Z",
+        "notifiedAboutChangeAt": "2026-07-21T18:05:41.888Z"
+      },
+      {
+        "pricingModel": "PAY_PER_EVENT",
+        "pricingPerEvent": {
+          "actorChargeEvents": {
+            "result": {
+              "eventTitle": "Result row",
+              "eventDescription": "Charged per keyword, competitor, or ranked-keyword row returned.",
+              "isOneTimeEvent": false,
+              "eventPriceUsd": 0.005,
+              "isPrimaryEvent": true
+            },
+            "report": {
+              "eventTitle": "Domain/backlink report",
+              "eventDescription": "Charged per single-object report (domain overview or backlinks summary).",
+              "isOneTimeEvent": false,
+              "eventPriceUsd": 0.02
+            },
+            "apify-actor-start": {
+              "eventTitle": "Actor Start",
+              "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+              "isOneTimeEvent": true,
+              "eventPriceUsd": 5e-05
+            }
+          }
+        },
+        "apifyMarginPercentage": 0.2,
+        "minimalMaxTotalChargeUsd": null,
+        "isPPEPlatformUsagePaidByUser": true,
+        "reasonForChange": "Restore required Pay per event plus platform usage pass-through.",
+        "startedAt": "2026-08-04T20:29:34.070Z",
+        "createdAt": "2026-07-21T20:21:42.354Z",
+        "notifiedAboutFutureChangeAt": "2026-07-21T20:22:02.495Z",
+        "notifiedAboutChangeAt": "2026-08-05T15:06:38.157Z"
+      }
+    ],
+    "schema": "input-schemas/seo-domain-keyword-scraper.json",
+    "checkedAt": "2026-10-11T08:01:03.712563+00:00",
+    "recentRunStatuses": [
+      "SUCCEEDED"
+    ],
+    "qualification": "live-metadata-and-schema-readback; no-new-run"
+  },
+  "backlink-opportunity-finder": {
+    "id": "n1uR8aWhzOBYhxLJl",
+    "name": "backlink-opportunity-finder",
+    "username": "khadinakbar",
+    "title": "Backlink Opportunity Finder",
+    "isPublic": true,
+    "buildId": "vNnmZncbiNljp3kNk",
+    "buildNumber": "1.0.14",
+    "buildStatus": "SUCCEEDED",
+    "modifiedAt": "2026-10-04T14:32:34.073Z",
+    "defaultRunOptions": {
+      "build": "latest",
+      "timeoutSecs": 3600,
+      "memoryMbytes": 4096
+    },
+    "pricingInfos": [
+      {
+        "pricingModel": "PAY_PER_EVENT",
+        "isPPEPlatformUsagePaidByUser": true,
+        "pricingPerEvent": {
+          "actorChargeEvents": {
+            "apify-actor-start": {
+              "eventTitle": "Actor Start",
+              "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+              "eventPriceUsd": 5e-05
+            },
+            "apify-default-dataset-item": {
+              "eventTitle": "Backlink prospect found",
+              "eventDescription": "One validated public prospect URL saved to the default dataset.",
+              "eventPriceUsd": 0.006,
+              "isPrimaryEvent": true
+            }
+          }
+        },
+        "createdAt": "2026-07-15T18:25:59.742Z",
+        "startedAt": "2026-07-15T18:25:59.742Z",
+        "apifyMarginPercentage": 0.2
+      },
+      {
+        "pricingModel": "PAY_PER_EVENT",
+        "apifyMarginPercentage": 0.2,
+        "pricingPerEvent": {
+          "actorChargeEvents": {
+            "apify-actor-start": {
+              "eventTitle": "Actor Start",
+              "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+              "eventPriceUsd": 5e-05
+            },
+            "apify-default-dataset-item": {
+              "eventTitle": "Backlink prospect found",
+              "eventDescription": "One validated public prospect URL saved to the default dataset.",
+              "eventPriceUsd": 0.006,
+              "isPrimaryEvent": true
+            }
+          }
+        },
+        "createdAt": "2026-07-21T17:06:34.316Z",
+        "startedAt": "2026-07-21T17:06:34.316Z",
+        "notifiedAboutChangeAt": "2026-07-21T18:05:40.957Z"
+      },
+      {
+        "pricingModel": "PAY_PER_EVENT",
+        "pricingPerEvent": {
+          "actorChargeEvents": {
+            "apify-actor-start": {
+              "eventTitle": "Actor Start",
+              "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+              "eventPriceUsd": 5e-05
+            },
+            "apify-default-dataset-item": {
+              "eventTitle": "Backlink prospect found",
+              "eventDescription": "One validated public prospect URL saved to the default dataset.",
+              "eventPriceUsd": 0.006,
+              "isPrimaryEvent": true
+            }
+          }
+        },
+        "apifyMarginPercentage": 0.2,
+        "minimalMaxTotalChargeUsd": null,
+        "isPPEPlatformUsagePaidByUser": true,
+        "reasonForChange": "Restore required Pay per event plus platform usage pass-through.",
+        "startedAt": "2026-08-04T20:29:34.070Z",
+        "createdAt": "2026-07-21T20:15:33.547Z",
+        "notifiedAboutFutureChangeAt": "2026-07-21T20:15:53.722Z",
+        "notifiedAboutChangeAt": "2026-08-05T15:06:39.240Z"
+      },
+      {
+        "pricingModel": "PAY_PER_EVENT",
+        "pricingPerEvent": {
+          "actorChargeEvents": {
+            "apify-actor-start": {
+              "eventTitle": "Actor Start",
+              "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+              "eventPriceUsd": 5e-05
+            },
+            "apify-default-dataset-item": {
+              "eventTitle": "Backlink prospect found",
+              "eventDescription": "One validated public prospect URL saved to the default dataset.",
+              "eventPriceUsd": 0.006,
+              "isPrimaryEvent": true
+            }
+          }
+        },
+        "reasonForChange": "Wave-185 margin: disable PPE platform usage pass-through (usagePct<10 from Wave-200); event prices unchanged",
+        "createdAt": "2026-09-10T13:10:29.477Z",
+        "startedAt": "2026-09-10T13:10:29.477Z",
+        "apifyMarginPercentage": 0.2,
+        "notifiedAboutChangeAt": "2026-09-10T13:35:43.943Z"
+      }
+    ],
+    "schema": "input-schemas/backlink-opportunity-finder.json",
+    "checkedAt": "2026-10-11T08:01:14.897563+00:00",
+    "recentRunStatuses": [
+      "SUCCEEDED",
+      "SUCCEEDED",
+      "SUCCEEDED",
+      "SUCCEEDED",
+      "SUCCEEDED"
+    ],
+    "qualification": "live-metadata-and-schema-readback; no-new-run"
+  },
+  "broken-link-checker": {
+    "id": "a2yeVoO8SdJgVEgbK",
+    "name": "broken-link-checker",
+    "username": "khadinakbar",
+    "title": "Broken Link Checker for Technical SEO Audits",
+    "isPublic": true,
+    "buildId": "WfxfVNubWLUFjclQy",
+    "buildNumber": "1.2.5",
+    "buildStatus": "SUCCEEDED",
+    "modifiedAt": "2026-10-04T14:40:56.310Z",
+    "defaultRunOptions": {
+      "build": "latest",
+      "timeoutSecs": 3600,
+      "memoryMbytes": 1024
+    },
+    "pricingInfos": [
+      {
+        "pricingModel": "PAY_PER_EVENT",
+        "isPPEPlatformUsagePaidByUser": true,
+        "pricingPerEvent": {
+          "actorChargeEvents": {
+            "apify-actor-start": {
+              "eventTitle": "Actor Start",
+              "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+              "isOneTimeEvent": true,
+              "eventPriceUsd": 5e-05
+            },
+            "link-checked": {
+              "eventTitle": "Link checked",
+              "eventDescription": "Charged for each unique URL verified, including HEAD/GET requests, redirect tracing, and failure classification.",
+              "isOneTimeEvent": false,
+              "isPrimaryEvent": true,
+              "eventPriceUsd": 0.001
+            }
+          }
+        },
+        "createdAt": "2026-05-03T17:49:00.439Z",
+        "startedAt": "2026-05-03T17:49:00.439Z",
+        "apifyMarginPercentage": 0.2
+      },
+      {
+        "pricingModel": "PAY_PER_EVENT",
+        "apifyMarginPercentage": 0.2,
+        "pricingPerEvent": {
+          "actorChargeEvents": {
+            "apify-actor-start": {
+              "eventTitle": "Actor Start",
+              "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+              "isOneTimeEvent": true,
+              "eventPriceUsd": 5e-05
+            },
+            "link-checked": {
+              "eventTitle": "Link checked",
+              "eventDescription": "Charged for each unique URL verified, including HEAD/GET requests, redirect tracing, and failure classification.",
+              "isOneTimeEvent": false,
+              "isPrimaryEvent": true,
+              "eventPriceUsd": 0.001
+            }
+          }
+        },
+        "createdAt": "2026-07-21T17:02:59.301Z",
+        "startedAt": "2026-07-21T17:02:59.301Z",
+        "notifiedAboutChangeAt": "2026-07-21T17:05:51.713Z"
+      },
+      {
+        "pricingModel": "PAY_PER_EVENT",
+        "pricingPerEvent": {
+          "actorChargeEvents": {
+            "apify-actor-start": {
+              "eventTitle": "Actor Start",
+              "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+              "isOneTimeEvent": true,
+              "eventPriceUsd": 5e-05
+            },
+            "link-checked": {
+              "eventTitle": "Link checked",
+              "eventDescription": "Charged for each unique URL verified, including HEAD/GET requests, redirect tracing, and failure classification.",
+              "isOneTimeEvent": false,
+              "isPrimaryEvent": true,
+              "eventPriceUsd": 0.001
+            }
+          }
+        },
+        "apifyMarginPercentage": 0.2,
+        "minimalMaxTotalChargeUsd": null,
+        "isPPEPlatformUsagePaidByUser": true,
+        "reasonForChange": "Restore required Pay per event plus platform usage pass-through.",
+        "startedAt": "2026-08-04T20:29:34.070Z",
+        "createdAt": "2026-07-21T20:15:54.253Z",
+        "notifiedAboutFutureChangeAt": "2026-07-21T20:16:14.553Z",
+        "notifiedAboutChangeAt": "2026-08-05T15:06:36.537Z"
+      },
+      {
+        "pricingModel": "PAY_PER_EVENT",
+        "pricingPerEvent": {
+          "actorChargeEvents": {
+            "apify-actor-start": {
+              "eventTitle": "Actor Start",
+              "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+              "eventPriceUsd": 5e-05,
+              "isOneTimeEvent": true
+            },
+            "link-checked": {
+              "eventTitle": "Link checked",
+              "eventDescription": "Charged for each unique URL verified, including HEAD/GET requests, redirect tracing, and failure classification.",
+              "eventPriceUsd": 0.001,
+              "isPrimaryEvent": true,
+              "isOneTimeEvent": false
+            }
+          }
+        },
+        "reasonForChange": "Wave-0-20 margin: disable PPE platform usage pass-through (worst usage/total <20% from 2026-09-25 audit); event prices unchanged",
+        "createdAt": "2026-09-25T10:35:32.682Z",
+        "startedAt": "2026-09-25T10:35:32.682Z",
+        "apifyMarginPercentage": 0.2,
+        "notifiedAboutChangeAt": "2026-09-25T10:35:56.378Z"
+      }
+    ],
+    "schema": "input-schemas/broken-link-checker.json",
+    "checkedAt": "2026-10-11T08:01:14.373573+00:00",
+    "recentRunStatuses": [
+      "SUCCEEDED",
+      "SUCCEEDED",
+      "SUCCEEDED",
+      "SUCCEEDED",
+      "SUCCEEDED"
+    ],
+    "qualification": "live-metadata-and-schema-readback; no-new-run"
+  },
+  "complete-seo-audit": {
+    "id": "iC8z4bnewATHdZdiZ",
+    "name": "complete-seo-audit",
+    "username": "khadinakbar",
+    "title": "Complete SEO Audit Tool - Technical Website Audit",
+    "isPublic": true,
+    "buildId": "lTpkUXLWIOGJupm6K",
+    "buildNumber": "1.0.6",
+    "buildStatus": "SUCCEEDED",
+    "modifiedAt": "2026-10-04T15:34:29.140Z",
+    "defaultRunOptions": {
+      "build": "latest",
+      "timeoutSecs": 3600,
+      "memoryMbytes": 4096
+    },
+    "pricingInfos": [
+      {
+        "pricingModel": "PAY_PER_EVENT",
+        "isPPEPlatformUsagePaidByUser": true,
+        "pricingPerEvent": {
+          "actorChargeEvents": {
+            "apify-actor-start": {
+              "eventTitle": "Actor Start",
+              "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+              "eventPriceUsd": 5e-05
+            },
+            "seo-audit-completed": {
+              "eventTitle": "Complete SEO audit",
+              "eventDescription": "One persisted, source-linked technical SEO audit report for one public website.",
+              "eventPriceUsd": 0.1,
+              "isPrimaryEvent": true
+            }
+          }
+        },
+        "createdAt": "2026-08-09T04:44:26.285Z",
+        "startedAt": "2026-08-09T04:44:26.285Z",
+        "apifyMarginPercentage": 0.2
+      }
+    ],
+    "schema": "input-schemas/complete-seo-audit.json",
+    "checkedAt": "2026-10-11T08:01:14.566174+00:00",
+    "recentRunStatuses": [
+      "SUCCEEDED",
+      "SUCCEEDED",
+      "SUCCEEDED",
+      "SUCCEEDED",
+      "SUCCEEDED"
+    ],
+    "qualification": "live-metadata-and-schema-readback; no-new-run"
+  },
+  "keyword-rank-tracker": {
+    "id": "ufcrXss0mJzYLRgWW",
+    "name": "keyword-rank-tracker",
+    "username": "khadinakbar",
+    "title": "Keyword Rank Tracker \u2014 Google SERP Positions",
+    "isPublic": true,
+    "buildId": "RLJfTHCelUBeDR4Sp",
+    "buildNumber": "1.1.5",
+    "buildStatus": "SUCCEEDED",
+    "modifiedAt": "2026-10-04T16:14:13.145Z",
+    "defaultRunOptions": {
+      "build": "latest",
+      "timeoutSecs": 3600,
+      "memoryMbytes": 4096
+    },
+    "pricingInfos": [
+      {
+        "pricingModel": "PAY_PER_EVENT",
+        "isPPEPlatformUsagePaidByUser": true,
+        "apifyMarginPercentage": 0.2,
+        "createdAt": "2026-08-09T04:45:31.906Z",
+        "startedAt": "2026-08-09T04:45:30.000Z",
+        "pricingPerEvent": {
+          "actorChargeEvents": {
+            "apify-actor-start": {
+              "eventTitle": "Actor Start",
+              "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+              "isOneTimeEvent": true,
+              "eventPriceUsd": 5e-05
+            },
+            "keyword-rank": {
+              "eventTitle": "Keyword rank check",
+              "eventDescription": "One persisted Google organic keyword rank snapshot.",
+              "eventPriceUsd": 0.01,
+              "isPrimaryEvent": true
+            }
+          }
+        }
+      },
+      {
+        "pricingModel": "PAY_PER_EVENT",
+        "isPPEPlatformUsagePaidByUser": true,
+        "apifyMarginPercentage": 0.2,
+        "createdAt": "2026-08-09T04:56:39.449Z",
+        "startedAt": "2026-08-09T04:56:30.000Z",
+        "reasonForChange": "Raise keyword-rank price to preserve the requested minimum 70% gross margin within the advertised depth envelope.",
+        "pricingPerEvent": {
+          "actorChargeEvents": {
+            "apify-actor-start": {
+              "eventTitle": "Actor Start",
+              "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+              "isOneTimeEvent": true,
+              "eventPriceUsd": 5e-05
+            },
+            "keyword-rank": {
+              "eventTitle": "Keyword rank check",
+              "eventDescription": "One persisted Google organic keyword rank snapshot within the margin-safe depth envelope.",
+              "eventPriceUsd": 0.05,
+              "isPrimaryEvent": true
+            }
+          }
+        }
+      },
+      {
+        "pricingModel": "PAY_PER_EVENT",
+        "pricingPerEvent": {
+          "actorChargeEvents": {
+            "apify-actor-start": {
+              "eventTitle": "Actor Start",
+              "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+              "eventPriceUsd": 5e-05,
+              "isOneTimeEvent": true
+            },
+            "keyword-rank": {
+              "eventTitle": "Keyword rank check",
+              "eventDescription": "One persisted Google organic keyword rank snapshot within the margin-safe depth envelope.",
+              "eventPriceUsd": 0.05,
+              "isPrimaryEvent": true
+            }
+          }
+        },
+        "reasonForChange": "Wave-185 margin: disable PPE platform usage pass-through (usagePct<10 from Wave-200); event prices unchanged",
+        "createdAt": "2026-09-10T12:52:41.609Z",
+        "startedAt": "2026-09-10T12:52:41.609Z",
+        "apifyMarginPercentage": 0.2
+      },
+      {
+        "pricingModel": "PAY_PER_EVENT",
+        "apifyMarginPercentage": 0.2,
+        "pricingPerEvent": {
+          "actorChargeEvents": {
+            "apify-actor-start": {
+              "eventTitle": "Actor Start",
+              "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+              "eventPriceUsd": 5e-05,
+              "isOneTimeEvent": true
+            },
+            "keyword-rank": {
+              "eventTitle": "Keyword rank check",
+              "eventDescription": "One persisted Google organic keyword rank snapshot within the margin-safe depth envelope.",
+              "eventPriceUsd": 0.05,
+              "isPrimaryEvent": true
+            }
+          }
+        },
+        "createdAt": "2026-09-10T12:54:37.760Z",
+        "startedAt": "2026-09-10T12:54:37.760Z",
+        "notifiedAboutChangeAt": "2026-09-10T13:05:46.082Z"
+      }
+    ],
+    "schema": "input-schemas/keyword-rank-tracker.json",
+    "checkedAt": "2026-10-11T08:01:14.685549+00:00",
+    "recentRunStatuses": [
+      "SUCCEEDED",
+      "SUCCEEDED",
+      "SUCCEEDED",
+      "SUCCEEDED",
+      "SUCCEEDED"
+    ],
+    "qualification": "live-metadata-and-schema-readback; no-new-run"
+  }
+}

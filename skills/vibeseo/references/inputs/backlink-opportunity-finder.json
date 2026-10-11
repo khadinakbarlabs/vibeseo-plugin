@@ -1,0 +1,17 @@
+{
+  "keywords": [
+    "agency onboarding checklist"
+  ],
+  "targetDomain": "example.com",
+  "opportunityTypes": [
+    "resource_page"
+  ],
+  "excludeDomains": [
+    "example.com"
+  ],
+  "countryCode": "US",
+  "languageCode": "en",
+  "maxResultsPerKeyword": 5,
+  "maxPagesPerQuery": 1,
+  "minimumRelevanceScore": 35
+}

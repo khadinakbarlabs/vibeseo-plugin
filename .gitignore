@@ -1,0 +1,14 @@
+.DS_Store
+Thumbs.db
+desktop.ini
+__MACOSX/
+.env
+.env.*
+!.env.example
+.secrets/
+node_modules/
+storage/
+vibeseo-projects/
+evals/results/
+*.zip
+*.tar.gz

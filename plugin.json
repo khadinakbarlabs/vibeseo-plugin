@@ -1,0 +1,35 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "vibeseo",
+  "version": "0.1.0",
+  "description": "Keyword research, SEO content briefs and refreshes, technical audits, qualified link-building opportunities and sampled rank comparisons using your Apify Actors through the official CLI.",
+  "author": { "name": "Khadin Akbar" },
+  "homepage": "https://github.com/khadinakbarlabs/vibeseo-plugin",
+  "repository": "https://github.com/khadinakbarlabs/vibeseo-plugin",
+  "license": "MIT",
+  "keywords": ["seo", "keyword-research", "content-strategy", "content-brief", "content-optimization", "link-building", "backlink-opportunities", "serp-analysis", "competitor-analysis", "technical-seo", "rank-tracking", "apify", "apify-cli"],
+  "extensions": {
+    "com.openai": {
+      "onboardingSkill": "./skills/vibeseo/SKILL.md",
+      "interface": {
+        "displayName": "VibeSEO: SEO & Content",
+        "shortDescription": "Keywords, content & backlinks",
+        "longDescription": "Build an SEO plan you can act on. VibeSEO connects your assistant to eight Apify Actors through the official Apify CLI to research keywords, inspect Google search results, compare competitor keywords, audit pages, discover relevant link opportunities and sample keyword rankings. Seven focused skills produce keyword-to-page maps, content calendars, writer-ready briefs, reviewed drafts, content refresh plans, qualified link prospect lists, outreach drafts and source-linked reports. Reuse supplied exports for offline work; missing metrics remain unknown. Your own Apify account handles authentication and Actor charges, with explicit approval and a bounded plan before each billable operation. Reports and project context are saved in a visible folder you choose. Local command execution is required for live research. The package contains skills and static supporting files; no bundled server, MCP connection, hooks, sender or scheduler. It does not publish content, send outreach or acquire backlinks automatically, and does not guarantee traffic or rankings.",
+        "developerName": "Khadin Akbar",
+        "category": "Data & Analytics",
+        "logo": "./assets/icon.svg",
+        "composerIcon": "./assets/icon.svg",
+        "defaultPrompt": [
+          "Find keyword opportunities and turn them into a content plan for my site.",
+          "Create an evidence-backed SEO content brief for my target keyword.",
+          "Find relevant link-building opportunities and prepare outreach drafts."
+        ],
+        "capabilities": [],
+        "websiteURL": "https://github.com/khadinakbarlabs/vibeseo-plugin",
+        "supportURL": "https://github.com/khadinakbarlabs/vibeseo-plugin/blob/main/SUPPORT.md",
+        "privacyPolicyURL": "https://github.com/khadinakbarlabs/vibeseo-plugin/blob/main/PRIVACY.md",
+        "termsOfServiceURL": "https://github.com/khadinakbarlabs/vibeseo-plugin/blob/main/TERMS.md"
+      }
+    }
+  }
+}
