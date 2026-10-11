@@ -21,14 +21,14 @@ No new billable Actor run was started. Current Apify documentation describes `ma
 
 ## Host behavior checks
 
-Seven authored native evaluation cases cover evidence missingness, content originality, link-state integrity, upstream failure, prompt injection, rank comparability and spend consent. Host evaluation results are pending and will be recorded after running; authored cases alone are not passed tests. Live CLI research is targeted to Claude Code. Cowork and browser-chat live execution are not validated.
+Seven authored native evaluation cases cover evidence missingness, content originality, link-state integrity, upstream failure, prompt injection, rank comparability and spend consent. The native runner resolved VibeSEO 0.1.0 and parsed the first case, but stopped immediately on expired Claude OAuth authentication (`auth_failed`); cost was $0 and no meaningful workflow evaluation completed. The user was asked to refresh their local Claude Code login. Cases and routing graders were structurally checked for all seven scenarios; they are not passed behavior tests. Live CLI research is targeted to Claude Code. Cowork and browser-chat live execution are not validated.
 
 ## Release and directory states
 
 - Local source package: authored and manifest/input validated.
 - Final archive inspection: pending.
 - Plugin Creator private save: pending.
-- GitHub source upload: pending.
+- GitHub source upload: saved privately at `khadinakbarlabs/vibeseo-plugin`; public source release awaits owner approval.
 - Anthropic portal validation: pending.
 - Owner approval of final metadata/public release/submission: pending, explicitly requested by the owner.
 - Submitted for Anthropic review: no.
