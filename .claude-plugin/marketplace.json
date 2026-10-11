@@ -1,0 +1,12 @@
+{
+  "name": "vibeseo-tools",
+  "description": "VibeSEO keyword, content, audit and link research skills for Claude Code through the official Apify CLI.",
+  "owner": { "name": "Khadin Akbar" },
+  "plugins": [
+    {
+      "name": "vibeseo",
+      "source": "./",
+      "version": "0.1.1"
+    }
+  ]
+}

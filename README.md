@@ -40,6 +40,8 @@ For a local source checkout, load the plugin with the [supported Claude Code dev
 claude --plugin-dir ./vibeseo-plugin
 ```
 
+For an extracted Claude-only archive, use the extraction directory in place of `./vibeseo-plugin`. The repository also includes a local marketplace adapter named `vibeseo-tools`, with the plugin at the repository root. Follow the [official marketplace install flow](https://code.claude.com/docs/en/plugin-marketplaces) if you choose that route; do not load a cached and a development edition together. Directory submission and publication remain separate from either local method.
+
 For live research, install the official CLI from npm at the tested version:
 
 ```bash
@@ -85,4 +87,4 @@ Publishing content, sending an outreach message, buying a placement, scheduling 
 
 Workflow instructions were authored for this Actor-backed package after reviewing leading open-source SEO skill projects. Their stars, commits, licenses and specific design lessons are documented in [UPSTREAM_SOURCES.md](UPSTREAM_SOURCES.md). Upstream install scripts, servers, agents, promotional instructions and credentials are not incorporated.
 
-See [RELEASE-EVIDENCE.md](RELEASE-EVIDENCE.md) for the exact checks completed and the remaining review steps, [SUPPORT.md](SUPPORT.md) for help, [TERMS.md](TERMS.md) for use conditions and [LICENSE](LICENSE) for the MIT license. Backend data and third-party websites retain their own terms and rights.
+See [RELEASE-EVIDENCE.md](RELEASE-EVIDENCE.md) for observed checks and remaining review steps, [REVIEWER-GUIDE.md](REVIEWER-GUIDE.md) for reproducible offline review cases, [PRIVACY-MATRIX.md](PRIVACY-MATRIX.md) for field-level handling, [SECURITY.md](SECURITY.md) for reporting a concern, [SUPPORT.md](SUPPORT.md) for help, [TERMS.md](TERMS.md) for use conditions and [LICENSE](LICENSE) for the MIT license. Backend data and third-party websites retain their own terms and rights.

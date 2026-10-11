@@ -1,7 +1,7 @@
 {
   "name": "vibeseo",
   "displayName": "VibeSEO: Keywords, Content & Link Building",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Turn keyword research, Google SERP analysis and SEO audits into prioritized content plans, writer-ready briefs, content refreshes and qualified link-building opportunities. Compare competitors and sampled keyword rankings with source-linked evidence. Skills-only workflows use your own Apify account through the official CLI, with approved run budgets and local reports. Publishing and outreach stay under your control.",
   "author": { "name": "Khadin Akbar" },
   "homepage": "https://github.com/khadinakbarlabs/vibeseo-plugin",

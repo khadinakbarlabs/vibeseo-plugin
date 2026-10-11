@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "vibeseo",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Keyword research, SEO content briefs and refreshes, technical audits, qualified link-building opportunities and sampled rank comparisons using your Apify Actors through the official CLI.",
   "author": { "name": "Khadin Akbar" },
   "homepage": "https://github.com/khadinakbarlabs/vibeseo-plugin",
