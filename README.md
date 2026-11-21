@@ -28,11 +28,17 @@ Ask Claude:
 
 > Find relevant resource pages for our original checklist and draft outreach for my review.
 
-Or use `/vibesearch:keywords`, `/vibesearch:content-brief`, `/vibesearch:link-building`, and the other namespaced skills. The assistant asks only for the site, audience, market, goal, or permissions that are missing from the conversation and chosen project folder.
+Or use `/vibeseo:keywords`, `/vibeseo:content-brief`, `/vibeseo:link-building`, and the other namespaced skills. The assistant asks only for the site, audience, market, goal, or permissions that are missing from the conversation and chosen project folder.
 
 ## Install and requirements
 
 The initial release is prepared for Anthropic directory review. A directory listing is available only after Anthropic's review and publication steps; a local package or a private Plugin Creator save does not establish that status.
+
+To install from the repository marketplace:
+
+```bash
+/plugin install vibeseo --marketplace khadinakbarlabs/vibeseo-plugin
+```
 
 For a local source checkout, load the plugin with the [supported Claude Code development flow](https://code.claude.com/docs/en/plugins):
 
