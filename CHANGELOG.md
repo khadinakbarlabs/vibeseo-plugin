@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.5 — 2026-11-22
+
+Manifest cleanup for the Claude directory — removed listing-only and cross-tool keys from .claude-plugin/plugin.json and the unused agent-plugins root manifest; no behavior change.
+
 ## 0.1.3 — 2026-11-21
 
 Restore the plugin package name `vibeseo` (the name the Anthropic directory submission was made with) in the Claude and portable manifests and the marketplace entry, so skills are namespaced `/vibeseo:*` again. The VibeSearch display name, onboarding skill `vibesearch`, workflows and Actor contracts are unchanged. Add the marketplace install line to the README.
