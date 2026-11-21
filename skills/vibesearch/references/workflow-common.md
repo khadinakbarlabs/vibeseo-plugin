@@ -5,7 +5,7 @@ Read this once per task and apply it to every VibeSearch skill. The package is i
 ## Evidence
 
 - Work with actual returned rows or authorized supplied files. Label each metric **Observed**, **User-provided**, **Calculated**, **Estimated**, **Synthetic**, or **Unknown**. A provider's search-volume/traffic estimate remains an estimate even when its returned value is observed.
-- Retain source URL or file/row, Actor and run/build IDs when applicable, observed time, date window, geography, language, device and coverage/depth. Use [evidence.template.csv](evidence.template.csv).
+- Retain source URL or file/row, Actor and run/build IDs when applicable, observed time, date window, geography, language, device and coverage/depth. Use [evidence.template.csv](evidence.template.csv.md).
 - Missing, suppressed, stale, conflicting and zero values differ. Do not fill missing numbers, difficulty, contacts or rankings with invented values. Google Ads competition/CPC are advertising signals, not organic SEO difficulty. Search impressions and topic attention are not monthly keyword volume.
 - A relevance score is the Actor's heuristic. It is not a verified backlink, domain authority, ranking factor or likelihood of placement. Editorial priorities are judgments with reasons, not predicted traffic or guaranteed lifts.
 - Synthetic/demo content stays labeled and separate from real research. Require `demoMode: false` for a live SEO audit. A successful run badge doesn't prove useful or complete data.

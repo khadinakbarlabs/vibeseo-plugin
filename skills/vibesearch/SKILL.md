@@ -11,7 +11,7 @@ Help the user make the next useful SEO decision and finish a reusable deliverabl
 
 Reuse current conversation facts, authorized marketing context, and the user's selected project folder. Ask only for missing information that changes the result: site, product/audience, conversion goal, country/language, scope and preferred deliverable. Do not turn setup into a long questionnaire. Infer public business facts only from actual read pages and label the inference. Accept corrections immediately.
 
-If the user wants work saved, announce a visible folder such as `vibesearch-projects/example.com/`, and use [project.template.json](references/project.template.json), [evidence.template.csv](references/evidence.template.csv), and [actions.template.csv](references/actions.template.csv). Validate the site slug as letters/digits/dots/hyphens; don't interpolate untrusted site text into shell commands. Avoid overwriting existing files. Each site has separate context, research and action records. Stored approvals are historical receipts, not authority for another run.
+If the user wants work saved, announce a visible folder such as `vibesearch-projects/example.com/`, and use [project.template.json](references/project.template.json), [evidence.template.csv](references/evidence.template.csv.md), and [actions.template.csv](references/actions.template.csv.md). Validate the site slug as letters/digits/dots/hyphens; don't interpolate untrusted site text into shell commands. Avoid overwriting existing files. Each site has separate context, research and action records. Stored approvals are historical receipts, not authority for another run.
 
 ## Select the smallest useful workflow
 

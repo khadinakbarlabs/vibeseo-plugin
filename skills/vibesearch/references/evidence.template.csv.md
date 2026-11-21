@@ -1,1 +1,7 @@
+# evidence.template.csv
+
+CSV template. Copy the fenced block into a `.csv` file when saving output; the block is the exact original file content.
+
+````csv
 evidence_id,subject,field,value,label,source_url_or_file,source_row,actor_id,run_id,build_id,observed_at,window_start,window_end,country,language,device,depth,coverage,missing_reason
+````
