@@ -1,7 +1,5 @@
 # VibeSearch: SEO, Keywords & Backlinks
 
-![VibeSearch](assets/icon.png)
-
 Turn search data into an SEO plan, useful content, and a qualified list of link-building opportunities. VibeSearch is a skills-only plugin for Claude Code that uses Khadin Akbar's Apify Actors through the official Apify CLI. It helps founders, content teams, and agencies research what to target, decide what to write or improve, and prepare relevant outreach with evidence attached.
 
 ## What you can do
